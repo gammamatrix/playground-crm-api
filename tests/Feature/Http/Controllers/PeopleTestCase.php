@@ -6,8 +6,6 @@
 declare(strict_types=1);
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * \Tests\Feature\Playground\Crm\Api\Http\Controllers\PeopleTestCase
  */
