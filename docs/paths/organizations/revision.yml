@@ -1,0 +1,51 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The organization revision id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - Organization
+  summary: 'Show a organization revision by ID.'
+  operationId: revision_organization
+  responses:
+    200:
+      description: 'The organization revision.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/organization-revision.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+put:
+  tags:
+    - Organization
+  summary: 'Restore a organization Revision by ID.'
+  operationId: restore_revision_organization
+  responses:
+    200:
+      description: 'The restored organization.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/organization.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

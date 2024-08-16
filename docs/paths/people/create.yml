@@ -1,0 +1,21 @@
+get:
+  tags:
+    - People
+  summary: 'Create a people form.'
+  operationId: create_people
+  responses:
+    200:
+      description: 'The create people information.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/people.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

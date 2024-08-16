@@ -1,0 +1,21 @@
+get:
+  tags:
+    - Client
+  summary: 'Create a client form.'
+  operationId: create_client
+  responses:
+    200:
+      description: 'The create client information.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/client.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

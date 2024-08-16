@@ -1,0 +1,32 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The organization id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - Organization
+  summary: 'Get the revisions of a organization.'
+  operationId: revision_index_organization
+  responses:
+    200:
+      description: 'The organization revisions.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../../models/organization-revision.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

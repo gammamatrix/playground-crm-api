@@ -1,0 +1,32 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The client id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - Client
+  summary: 'Get the revisions of a client.'
+  operationId: revision_index_client
+  responses:
+    200:
+      description: 'The client revisions.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../../models/client-revision.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

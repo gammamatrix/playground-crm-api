@@ -1,0 +1,51 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The client revision id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - Client
+  summary: 'Show a client revision by ID.'
+  operationId: revision_client
+  responses:
+    200:
+      description: 'The client revision.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/client-revision.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+put:
+  tags:
+    - Client
+  summary: 'Restore a client Revision by ID.'
+  operationId: restore_revision_client
+  responses:
+    200:
+      description: 'The restored client.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/client.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

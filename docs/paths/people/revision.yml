@@ -1,0 +1,51 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The people revision id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - People
+  summary: 'Show a people revision by ID.'
+  operationId: revision_people
+  responses:
+    200:
+      description: 'The people revision.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/people-revision.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+put:
+  tags:
+    - People
+  summary: 'Restore a people Revision by ID.'
+  operationId: restore_revision_people
+  responses:
+    200:
+      description: 'The restored people.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/people.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden

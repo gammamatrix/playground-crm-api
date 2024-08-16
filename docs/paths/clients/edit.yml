@@ -1,0 +1,30 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The client id.'
+    schema:
+      type: string
+      format: uuid
+get:
+  tags:
+    - Client
+  summary: 'Edit a client form.'
+  operationId: edit_client
+  responses:
+    200:
+      description: 'The edit client information.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/client.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
