@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-08-16 08:04:28</timestamp>
+  <timestamp>2025-09-28 21:31:39</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>93</methodCount>
+    <methodCount>84</methodCount>
     <crapMethodCount>0</crapMethodCount>
     <crapLoad>0</crapLoad>
-    <totalCrap>217</totalCrap>
+    <totalCrap>181</totalCrap>
     <crapMethodPercent>0</crapMethodPercent>
   </stats>
   <methods>
@@ -15,8 +15,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>create</methodName>
-      <methodSignature>create(Playground\Crm\Api\Http\Requests\Client\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>create(Playground\Crm\Api\Http\Requests\Client\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
+      <methodSignature>create(Requests\Client\CreateRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>create(Requests\Client\CreateRequest $request): JsonResponse|Resources\Client</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -26,8 +26,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>edit(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
+      <methodSignature>edit(Client $client, Requests\Client\EditRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>edit(Client $client, Requests\Client\EditRequest $request): JsonResponse|Resources\Client</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -37,8 +37,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>destroy</methodName>
-      <methodSignature>destroy(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\DestroyRequest $request): Illuminate\Http\Response</methodSignature>
-      <fullMethod>destroy(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\DestroyRequest $request): Illuminate\Http\Response</fullMethod>
+      <methodSignature>destroy(Client $client, Requests\Client\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Client $client, Requests\Client\DestroyRequest $request): Response</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -48,8 +48,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>lock</methodName>
-      <methodSignature>lock(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>lock(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
+      <methodSignature>lock(Client $client, Requests\Client\LockRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>lock(Client $client, Requests\Client\LockRequest $request): JsonResponse|Resources\Client</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -59,8 +59,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>index</methodName>
-      <methodSignature>index(Playground\Crm\Api\Http\Requests\Client\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\ClientCollection</methodSignature>
-      <fullMethod>index(Playground\Crm\Api\Http\Requests\Client\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\ClientCollection</fullMethod>
+      <methodSignature>index(Requests\Client\IndexRequest $request): JsonResponse|Resources\ClientCollection</methodSignature>
+      <fullMethod>index(Requests\Client\IndexRequest $request): JsonResponse|Resources\ClientCollection</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
@@ -70,10 +70,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>restore</methodName>
-      <methodSignature>restore(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>restore(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>restore(Client $client, Requests\Client\RestoreRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>restore(Client $client, Requests\Client\RestoreRequest $request): JsonResponse|Resources\Client</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -81,8 +81,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>show</methodName>
-      <methodSignature>show(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>show(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
+      <methodSignature>show(Client $client, Requests\Client\ShowRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>show(Client $client, Requests\Client\ShowRequest $request): JsonResponse|Resources\Client</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -92,8 +92,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>store</methodName>
-      <methodSignature>store(Playground\Crm\Api\Http\Requests\Client\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>store(Playground\Crm\Api\Http\Requests\Client\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
+      <methodSignature>store(Requests\Client\StoreRequest $request): Response|JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>store(Requests\Client\StoreRequest $request): Response|JsonResponse|Resources\Client</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -103,10 +103,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>unlock</methodName>
-      <methodSignature>unlock(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</methodSignature>
-      <fullMethod>unlock(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Client</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>unlock(Client $client, Requests\Client\UnlockRequest $request): JsonResponse|Resources\Client</methodSignature>
+      <fullMethod>unlock(Client $client, Requests\Client\UnlockRequest $request): JsonResponse|Resources\Client</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -114,10 +114,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ClientController</className>
       <methodName>update</methodName>
-      <methodSignature>update(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\UpdateRequest $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>update(Playground\Crm\Models\Client $client, Playground\Crm\Api\Http\Requests\Client\UpdateRequest $request): Illuminate\Http\JsonResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>update(Client $client, Requests\Client\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(Client $client, Requests\Client\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -125,8 +125,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>create</methodName>
-      <methodSignature>create(Playground\Crm\Api\Http\Requests\Contact\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>create(Playground\Crm\Api\Http\Requests\Contact\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
+      <methodSignature>create(Requests\Contact\CreateRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>create(Requests\Contact\CreateRequest $request): JsonResponse|Resources\Contact</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -136,8 +136,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>edit(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
+      <methodSignature>edit(Contact $contact, Requests\Contact\EditRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>edit(Contact $contact, Requests\Contact\EditRequest $request): JsonResponse|Resources\Contact</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -147,8 +147,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>destroy</methodName>
-      <methodSignature>destroy(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\DestroyRequest $request): Illuminate\Http\Response</methodSignature>
-      <fullMethod>destroy(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\DestroyRequest $request): Illuminate\Http\Response</fullMethod>
+      <methodSignature>destroy(Contact $contact, Requests\Contact\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Contact $contact, Requests\Contact\DestroyRequest $request): Response</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -158,8 +158,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>lock</methodName>
-      <methodSignature>lock(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>lock(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
+      <methodSignature>lock(Contact $contact, Requests\Contact\LockRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>lock(Contact $contact, Requests\Contact\LockRequest $request): JsonResponse|Resources\Contact</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -169,8 +169,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>index</methodName>
-      <methodSignature>index(Playground\Crm\Api\Http\Requests\Contact\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\ContactCollection</methodSignature>
-      <fullMethod>index(Playground\Crm\Api\Http\Requests\Contact\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\ContactCollection</fullMethod>
+      <methodSignature>index(Requests\Contact\IndexRequest $request): JsonResponse|Resources\ContactCollection</methodSignature>
+      <fullMethod>index(Requests\Contact\IndexRequest $request): JsonResponse|Resources\ContactCollection</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
@@ -180,10 +180,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>restore</methodName>
-      <methodSignature>restore(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>restore(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>restore(Contact $contact, Requests\Contact\RestoreRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>restore(Contact $contact, Requests\Contact\RestoreRequest $request): JsonResponse|Resources\Contact</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -191,8 +191,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>show</methodName>
-      <methodSignature>show(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>show(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
+      <methodSignature>show(Contact $contact, Requests\Contact\ShowRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>show(Contact $contact, Requests\Contact\ShowRequest $request): JsonResponse|Resources\Contact</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -202,8 +202,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>store</methodName>
-      <methodSignature>store(Playground\Crm\Api\Http\Requests\Contact\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>store(Playground\Crm\Api\Http\Requests\Contact\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
+      <methodSignature>store(Requests\Contact\StoreRequest $request): Response|JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>store(Requests\Contact\StoreRequest $request): Response|JsonResponse|Resources\Contact</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -213,10 +213,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>unlock</methodName>
-      <methodSignature>unlock(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</methodSignature>
-      <fullMethod>unlock(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Contact</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>unlock(Contact $contact, Requests\Contact\UnlockRequest $request): JsonResponse|Resources\Contact</methodSignature>
+      <fullMethod>unlock(Contact $contact, Requests\Contact\UnlockRequest $request): JsonResponse|Resources\Contact</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -224,10 +224,21 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\ContactController</className>
       <methodName>update</methodName>
-      <methodSignature>update(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\UpdateRequest $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>update(Playground\Crm\Models\Contact $contact, Playground\Crm\Api\Http\Requests\Contact\UpdateRequest $request): Illuminate\Http\JsonResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>update(Contact $contact, Requests\Contact\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(Contact $contact, Requests\Contact\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\Controller</className>
+      <methodName>packageInfo</methodName>
+      <methodSignature>packageInfo(): PackageInfo</methodSignature>
+      <fullMethod>packageInfo(): PackageInfo</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -235,8 +246,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>create</methodName>
-      <methodSignature>create(Playground\Crm\Api\Http\Requests\Location\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>create(Playground\Crm\Api\Http\Requests\Location\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
+      <methodSignature>create(Requests\Location\CreateRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>create(Requests\Location\CreateRequest $request): JsonResponse|Resources\Location</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -246,8 +257,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>edit(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
+      <methodSignature>edit(Location $location, Requests\Location\EditRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>edit(Location $location, Requests\Location\EditRequest $request): JsonResponse|Resources\Location</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -257,8 +268,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>destroy</methodName>
-      <methodSignature>destroy(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\DestroyRequest $request): Illuminate\Http\Response</methodSignature>
-      <fullMethod>destroy(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\DestroyRequest $request): Illuminate\Http\Response</fullMethod>
+      <methodSignature>destroy(Location $location, Requests\Location\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Location $location, Requests\Location\DestroyRequest $request): Response</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -268,8 +279,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>lock</methodName>
-      <methodSignature>lock(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>lock(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
+      <methodSignature>lock(Location $location, Requests\Location\LockRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>lock(Location $location, Requests\Location\LockRequest $request): JsonResponse|Resources\Location</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -279,8 +290,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>index</methodName>
-      <methodSignature>index(Playground\Crm\Api\Http\Requests\Location\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\LocationCollection</methodSignature>
-      <fullMethod>index(Playground\Crm\Api\Http\Requests\Location\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\LocationCollection</fullMethod>
+      <methodSignature>index(Requests\Location\IndexRequest $request): JsonResponse|Resources\LocationCollection</methodSignature>
+      <fullMethod>index(Requests\Location\IndexRequest $request): JsonResponse|Resources\LocationCollection</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
@@ -290,10 +301,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>restore</methodName>
-      <methodSignature>restore(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>restore(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>restore(Location $location, Requests\Location\RestoreRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>restore(Location $location, Requests\Location\RestoreRequest $request): JsonResponse|Resources\Location</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -301,8 +312,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>show</methodName>
-      <methodSignature>show(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>show(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
+      <methodSignature>show(Location $location, Requests\Location\ShowRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>show(Location $location, Requests\Location\ShowRequest $request): JsonResponse|Resources\Location</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -312,8 +323,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>store</methodName>
-      <methodSignature>store(Playground\Crm\Api\Http\Requests\Location\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>store(Playground\Crm\Api\Http\Requests\Location\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
+      <methodSignature>store(Requests\Location\StoreRequest $request): Response|JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>store(Requests\Location\StoreRequest $request): Response|JsonResponse|Resources\Location</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -323,10 +334,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>unlock</methodName>
-      <methodSignature>unlock(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</methodSignature>
-      <fullMethod>unlock(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Location</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>unlock(Location $location, Requests\Location\UnlockRequest $request): JsonResponse|Resources\Location</methodSignature>
+      <fullMethod>unlock(Location $location, Requests\Location\UnlockRequest $request): JsonResponse|Resources\Location</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -334,10 +345,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\LocationController</className>
       <methodName>update</methodName>
-      <methodSignature>update(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\UpdateRequest $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>update(Playground\Crm\Models\Location $location, Playground\Crm\Api\Http\Requests\Location\UpdateRequest $request): Illuminate\Http\JsonResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>update(Location $location, Requests\Location\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(Location $location, Requests\Location\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -345,8 +356,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>create</methodName>
-      <methodSignature>create(Playground\Crm\Api\Http\Requests\Organization\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>create(Playground\Crm\Api\Http\Requests\Organization\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
+      <methodSignature>create(Requests\Organization\CreateRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>create(Requests\Organization\CreateRequest $request): JsonResponse|Resources\Organization</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -356,8 +367,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>edit(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
+      <methodSignature>edit(Organization $organization, Requests\Organization\EditRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>edit(Organization $organization, Requests\Organization\EditRequest $request): JsonResponse|Resources\Organization</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -367,8 +378,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>destroy</methodName>
-      <methodSignature>destroy(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\DestroyRequest $request): Illuminate\Http\Response</methodSignature>
-      <fullMethod>destroy(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\DestroyRequest $request): Illuminate\Http\Response</fullMethod>
+      <methodSignature>destroy(Organization $organization, Requests\Organization\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Organization $organization, Requests\Organization\DestroyRequest $request): Response</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -378,8 +389,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>lock</methodName>
-      <methodSignature>lock(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>lock(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
+      <methodSignature>lock(Organization $organization, Requests\Organization\LockRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>lock(Organization $organization, Requests\Organization\LockRequest $request): JsonResponse|Resources\Organization</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -389,8 +400,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>index</methodName>
-      <methodSignature>index(Playground\Crm\Api\Http\Requests\Organization\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\OrganizationCollection</methodSignature>
-      <fullMethod>index(Playground\Crm\Api\Http\Requests\Organization\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\OrganizationCollection</fullMethod>
+      <methodSignature>index(Requests\Organization\IndexRequest $request): JsonResponse|Resources\OrganizationCollection</methodSignature>
+      <fullMethod>index(Requests\Organization\IndexRequest $request): JsonResponse|Resources\OrganizationCollection</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
@@ -400,10 +411,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>restore</methodName>
-      <methodSignature>restore(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>restore(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>restore(Organization $organization, Requests\Organization\RestoreRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>restore(Organization $organization, Requests\Organization\RestoreRequest $request): JsonResponse|Resources\Organization</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -411,8 +422,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>show</methodName>
-      <methodSignature>show(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>show(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
+      <methodSignature>show(Organization $organization, Requests\Organization\ShowRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>show(Organization $organization, Requests\Organization\ShowRequest $request): JsonResponse|Resources\Organization</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -422,8 +433,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>store</methodName>
-      <methodSignature>store(Playground\Crm\Api\Http\Requests\Organization\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>store(Playground\Crm\Api\Http\Requests\Organization\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
+      <methodSignature>store(Requests\Organization\StoreRequest $request): Response|JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>store(Requests\Organization\StoreRequest $request): Response|JsonResponse|Resources\Organization</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -433,10 +444,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>unlock</methodName>
-      <methodSignature>unlock(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</methodSignature>
-      <fullMethod>unlock(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\Organization</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>unlock(Organization $organization, Requests\Organization\UnlockRequest $request): JsonResponse|Resources\Organization</methodSignature>
+      <fullMethod>unlock(Organization $organization, Requests\Organization\UnlockRequest $request): JsonResponse|Resources\Organization</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -444,10 +455,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\OrganizationController</className>
       <methodName>update</methodName>
-      <methodSignature>update(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\UpdateRequest $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>update(Playground\Crm\Models\Organization $organization, Playground\Crm\Api\Http\Requests\Organization\UpdateRequest $request): Illuminate\Http\JsonResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>update(Organization $organization, Requests\Organization\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(Organization $organization, Requests\Organization\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -455,8 +466,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>create</methodName>
-      <methodSignature>create(Playground\Crm\Api\Http\Requests\People\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>create(Playground\Crm\Api\Http\Requests\People\CreateRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
+      <methodSignature>create(Requests\People\CreateRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>create(Requests\People\CreateRequest $request): JsonResponse|Resources\People</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -466,8 +477,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>edit(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\EditRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
+      <methodSignature>edit(People $people, Requests\People\EditRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>edit(People $people, Requests\People\EditRequest $request): JsonResponse|Resources\People</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -477,8 +488,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>destroy</methodName>
-      <methodSignature>destroy(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\DestroyRequest $request): Illuminate\Http\Response</methodSignature>
-      <fullMethod>destroy(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\DestroyRequest $request): Illuminate\Http\Response</fullMethod>
+      <methodSignature>destroy(People $people, Requests\People\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(People $people, Requests\People\DestroyRequest $request): Response</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -488,8 +499,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>lock</methodName>
-      <methodSignature>lock(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>lock(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\LockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
+      <methodSignature>lock(People $people, Requests\People\LockRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>lock(People $people, Requests\People\LockRequest $request): JsonResponse|Resources\People</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -499,8 +510,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>index</methodName>
-      <methodSignature>index(Playground\Crm\Api\Http\Requests\People\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\PeopleCollection</methodSignature>
-      <fullMethod>index(Playground\Crm\Api\Http\Requests\People\IndexRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\PeopleCollection</fullMethod>
+      <methodSignature>index(Requests\People\IndexRequest $request): JsonResponse|Resources\PeopleCollection</methodSignature>
+      <fullMethod>index(Requests\People\IndexRequest $request): JsonResponse|Resources\PeopleCollection</fullMethod>
       <crap>5</crap>
       <complexity>5</complexity>
       <coverage>100</coverage>
@@ -510,10 +521,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>restore</methodName>
-      <methodSignature>restore(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>restore(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\RestoreRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>restore(People $people, Requests\People\RestoreRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>restore(People $people, Requests\People\RestoreRequest $request): JsonResponse|Resources\People</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -521,8 +532,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>show</methodName>
-      <methodSignature>show(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>show(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\ShowRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
+      <methodSignature>show(People $people, Requests\People\ShowRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>show(People $people, Requests\People\ShowRequest $request): JsonResponse|Resources\People</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -532,8 +543,8 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>store</methodName>
-      <methodSignature>store(Playground\Crm\Api\Http\Requests\People\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>store(Playground\Crm\Api\Http\Requests\People\StoreRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
+      <methodSignature>store(Requests\People\StoreRequest $request): Response|JsonResponse|Resources\People</methodSignature>
+      <fullMethod>store(Requests\People\StoreRequest $request): Response|JsonResponse|Resources\People</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -543,10 +554,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>unlock</methodName>
-      <methodSignature>unlock(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</methodSignature>
-      <fullMethod>unlock(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\UnlockRequest $request): \Illuminate\Http\JsonResponse|\Playground\Crm\Api\Http\Resources\People</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>unlock(People $people, Requests\People\UnlockRequest $request): JsonResponse|Resources\People</methodSignature>
+      <fullMethod>unlock(People $people, Requests\People\UnlockRequest $request): JsonResponse|Resources\People</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -554,10 +565,10 @@
       <package>Playground\Crm\Api\Http\Controllers</package>
       <className>Playground\Crm\Api\Http\Controllers\PeopleController</className>
       <methodName>update</methodName>
-      <methodSignature>update(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\UpdateRequest $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>update(Playground\Crm\Models\People $people, Playground\Crm\Api\Http\Requests\People\UpdateRequest $request): Illuminate\Http\JsonResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>update(People $people, Requests\People\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(People $people, Requests\People\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -575,31 +586,9 @@
     <method>
       <package>Playground\Crm\Api\Http\Requests\Client</package>
       <className>Playground\Crm\Api\Http\Requests\Client\StoreRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Client</package>
-      <className>Playground\Crm\Api\Http\Requests\Client\StoreRequest</className>
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Client</package>
-      <className>Playground\Crm\Api\Http\Requests\Client\UpdateRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -630,31 +619,9 @@
     <method>
       <package>Playground\Crm\Api\Http\Requests\Contact</package>
       <className>Playground\Crm\Api\Http\Requests\Contact\StoreRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Contact</package>
-      <className>Playground\Crm\Api\Http\Requests\Contact\StoreRequest</className>
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Contact</package>
-      <className>Playground\Crm\Api\Http\Requests\Contact\UpdateRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -688,8 +655,8 @@
       <methodName>rules</methodName>
       <methodSignature>rules(): array</methodSignature>
       <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -697,8 +664,8 @@
       <package>Playground\Crm\Api\Http\Requests</package>
       <className>Playground\Crm\Api\Http\Requests\FormRequest</className>
       <methodName>userHasAdminPrivileges</methodName>
-      <methodSignature>userHasAdminPrivileges(Illuminate\Contracts\Auth\Authenticatable $user): bool</methodSignature>
-      <fullMethod>userHasAdminPrivileges(Illuminate\Contracts\Auth\Authenticatable $user): bool</fullMethod>
+      <methodSignature>userHasAdminPrivileges(?Authenticatable $user): bool</methodSignature>
+      <fullMethod>userHasAdminPrivileges(?Authenticatable $user): bool</fullMethod>
       <crap>3</crap>
       <complexity>3</complexity>
       <coverage>100</coverage>
@@ -718,31 +685,9 @@
     <method>
       <package>Playground\Crm\Api\Http\Requests\Location</package>
       <className>Playground\Crm\Api\Http\Requests\Location\StoreRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Location</package>
-      <className>Playground\Crm\Api\Http\Requests\Location\StoreRequest</className>
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Location</package>
-      <className>Playground\Crm\Api\Http\Requests\Location\UpdateRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -773,31 +718,9 @@
     <method>
       <package>Playground\Crm\Api\Http\Requests\Organization</package>
       <className>Playground\Crm\Api\Http\Requests\Organization\StoreRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Organization</package>
-      <className>Playground\Crm\Api\Http\Requests\Organization\StoreRequest</className>
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\Organization</package>
-      <className>Playground\Crm\Api\Http\Requests\Organization\UpdateRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -828,31 +751,9 @@
     <method>
       <package>Playground\Crm\Api\Http\Requests\People</package>
       <className>Playground\Crm\Api\Http\Requests\People\StoreRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\People</package>
-      <className>Playground\Crm\Api\Http\Requests\People\StoreRequest</className>
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Crm\Api\Http\Requests\People</package>
-      <className>Playground\Crm\Api\Http\Requests\People\UpdateRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules(): array</methodSignature>
-      <fullMethod>rules(): array</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
@@ -873,8 +774,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\Client</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -884,8 +785,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\ClientCollection</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -895,8 +796,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\Contact</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -906,8 +807,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\ContactCollection</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -917,8 +818,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\Location</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -928,8 +829,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\LocationCollection</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -939,8 +840,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\Organization</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -950,8 +851,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\OrganizationCollection</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -961,8 +862,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\People</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -972,8 +873,8 @@
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\PeopleCollection</className>
       <methodName>with</methodName>
-      <methodSignature>with(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>with(Illuminate\Http\Request $request): array</fullMethod>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -1007,8 +908,8 @@
       <methodName>setPolicies</methodName>
       <methodSignature>setPolicies(array $policies): void</methodSignature>
       <fullMethod>setPolicies(array $policies): void</fullMethod>
-      <crap>10</crap>
-      <complexity>10</complexity>
+      <crap>9</crap>
+      <complexity>9</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
