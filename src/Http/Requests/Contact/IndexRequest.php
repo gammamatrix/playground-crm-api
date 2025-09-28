@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Crm\Api\Http\Requests\Contact;
 
 use Playground\Http\Requests\IndexRequest as BaseIndexRequest;

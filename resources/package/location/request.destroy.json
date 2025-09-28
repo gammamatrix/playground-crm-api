@@ -1,0 +1,22 @@
+{
+    "class": "DestroyRequest",
+    "config": "playground-crm-api",
+    "fqdn": "Playground/Crm/Api/Http/Requests/Location/Location",
+    "model": "Location",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "Location",
+    "namespace": "Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "abstract": false,
+    "pagination": false,
+    "playground": false,
+    "store": false,
+    "slug": false,
+    "type": "destroy",
+    "extends": "FormRequest",
+    "extends_use": "Playground/Crm/Api/Http/Requests/FormRequest",
+    "models": []
+}

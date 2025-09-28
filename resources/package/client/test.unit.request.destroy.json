@@ -1,0 +1,23 @@
+{
+    "class": "DestroyRequestTest",
+    "config": "playground-crm-api",
+    "extends": "RequestCase",
+    "fqdn": "Tests/Unit/Playground/Crm/Api/DestroyRequestTest",
+    "model": "Client",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "DestroyRequestTest",
+    "namespace": "Tests/Unit/Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "playground": true,
+    "suite": "unit",
+    "type": "playground-request-model",
+    "uses": [
+        "Tests/Unit/Playground/Crm/Api/PackageProviders",
+        "Playground/Test/Unit/Http/Requests/RequestCase"
+    ],
+    "models": [],
+    "package_providers": []
+}

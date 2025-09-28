@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Crm\Api\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
@@ -44,14 +46,14 @@ class OrganizationController extends Controller
         Requests\Organization\CreateRequest $request
     ): JsonResponse|Resources\Organization {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
-        $user = $request->user();
+        $validated = $request->validated();
 
         $organization = new Organization($validated);
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -64,8 +66,11 @@ class OrganizationController extends Controller
         Organization $organization,
         Requests\Organization\EditRequest $request
     ): JsonResponse|Resources\Organization {
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -106,7 +111,7 @@ class OrganizationController extends Controller
         Requests\Organization\LockRequest $request
     ): JsonResponse|Resources\Organization {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
@@ -118,8 +123,8 @@ class OrganizationController extends Controller
 
         $organization->save();
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -132,11 +137,20 @@ class OrganizationController extends Controller
         Requests\Organization\IndexRequest $request
     ): JsonResponse|Resources\OrganizationCollection {
 
-        $user = $request->user();
+        $packageInfo = $this->packageInfo();
 
+        /**
+         * @var array{
+         *     sort: string|array<mixed>,
+         *     filter: array{
+         *         trash: string
+         *     },
+         *     perPage: int
+         * } $validated
+         */
         $validated = $request->validated();
 
-        $query = Organization::addSelect(sprintf('%1$s.*', $this->packageInfo['table']));
+        $query = Organization::addSelect(sprintf('%1$s.*', $packageInfo->table()));
 
         $query->sort($validated['sort'] ?? null);
 
@@ -170,7 +184,7 @@ class OrganizationController extends Controller
 
         $paginator->appends($validated);
 
-        return (new Resources\OrganizationCollection($paginator))->response($request);
+        return new Resources\OrganizationCollection($paginator)->response($request);
     }
 
     /**
@@ -183,16 +197,16 @@ class OrganizationController extends Controller
         Requests\Organization\RestoreRequest $request
     ): JsonResponse|Resources\Organization {
 
+        $packageInfo = $this->packageInfo();
+
         $user = $request->user();
 
-        if ($user?->id) {
-            $organization->modified_by_id = $user->id;
-        }
+        $organization->modified_by_id = $user?->id;
 
         $organization->restore();
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -205,8 +219,10 @@ class OrganizationController extends Controller
         Organization $organization,
         Requests\Organization\ShowRequest $request
     ): JsonResponse|Resources\Organization {
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -218,6 +234,8 @@ class OrganizationController extends Controller
     public function store(
         Requests\Organization\StoreRequest $request
     ): Response|JsonResponse|Resources\Organization {
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
@@ -228,8 +246,8 @@ class OrganizationController extends Controller
 
         $organization->save();
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request)->setStatusCode(201);
     }
 
@@ -243,20 +261,18 @@ class OrganizationController extends Controller
         Requests\Organization\UnlockRequest $request
     ): JsonResponse|Resources\Organization {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
         $organization->locked = false;
 
-        if ($user?->id) {
-            $organization->modified_by_id = $user->id;
-        }
+        $organization->modified_by_id = $user?->id;
 
         $organization->save();
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -270,18 +286,18 @@ class OrganizationController extends Controller
         Requests\Organization\UpdateRequest $request
     ): JsonResponse {
 
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
 
-        if ($user?->id) {
-            $organization->modified_by_id = $user->id;
-        }
+        $organization->modified_by_id = $user?->id;
 
         $organization->update($validated);
 
-        return (new Resources\Organization($organization))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Organization($organization)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 }

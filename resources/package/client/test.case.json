@@ -1,0 +1,22 @@
+{
+    "class": "ClientTestCase",
+    "config": "playground-crm-api",
+    "extends": "TestCase",
+    "fqdn": "Tests/Feature/Playground/Crm/Api/Http/Controllers/ClientTestCase",
+    "model": "Client",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "ClientTestCase",
+    "namespace": "Tests/Feature/Playground/Crm/Api/Http/Controllers",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "playground": true,
+    "suite": "feature",
+    "type": "playground-api-controller-model-case",
+    "uses": [],
+    "models": {
+        "Client": "resources/configurations/playground-crm/model.client.json"
+    },
+    "package_providers": []
+}

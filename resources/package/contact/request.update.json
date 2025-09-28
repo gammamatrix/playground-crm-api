@@ -1,0 +1,22 @@
+{
+    "class": "UpdateRequest",
+    "config": "playground-crm-api",
+    "fqdn": "Playground/Crm/Api/Http/Requests/Contact/Contact",
+    "model": "Contact",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "Contact",
+    "namespace": "Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "abstract": false,
+    "pagination": false,
+    "playground": false,
+    "store": false,
+    "slug": false,
+    "type": "update",
+    "extends": "BaseUpdateRequest",
+    "extends_use": "Playground/Http/Requests/UpdateRequest as BaseUpdateRequest",
+    "models": []
+}

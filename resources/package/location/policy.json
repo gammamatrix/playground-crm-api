@@ -1,0 +1,31 @@
+{
+    "class": "LocationPolicy",
+    "config": "playground-crm-api",
+    "fqdn": "Playground/Crm/Api/Policies/Location",
+    "model": "Location",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "Location",
+    "namespace": "Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "withTests": true,
+    "playground": false,
+    "models": [],
+    "uses": [],
+    "rolesForAction": [
+        "publisher",
+        "manager",
+        "admin",
+        "root"
+    ],
+    "rolesToView": [
+        "user",
+        "staff",
+        "publisher",
+        "manager",
+        "admin",
+        "root"
+    ]
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Playground
  */
@@ -62,7 +63,7 @@ Route::group([
     Route::get('/{client}', [
         'as' => 'playground.crm.api.clients.show',
         'uses' => 'ClientController@show',
-    ])->whereUuid('client')->can('detail', 'client');
+    ])->whereUuid('client')->can('detail', 'client')->withTrashed();
 
     // API
 

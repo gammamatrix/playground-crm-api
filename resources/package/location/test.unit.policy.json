@@ -1,0 +1,23 @@
+{
+    "class": "PolicyTest",
+    "config": "playground-crm-api",
+    "extends": "",
+    "fqdn": "Tests/Unit/Playground/Crm/Api/Policies/LocationPolicy/PolicyTest",
+    "model": "Location",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "PolicyTest",
+    "namespace": "Tests/Unit/Playground/Crm/Api/Policies/LocationPolicy",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "playground": true,
+    "suite": "unit",
+    "type": "policy",
+    "uses": [
+        "Tests/Unit/Playground/Crm/Api/TestCase",
+        "Playground/Crm/Api/Policies/LocationPolicy"
+    ],
+    "models": [],
+    "package_providers": []
+}

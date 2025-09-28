@@ -1,0 +1,23 @@
+{
+    "class": "CreateRequestTest",
+    "config": "playground-crm-api",
+    "extends": "RequestCase",
+    "fqdn": "Tests/Unit/Playground/Crm/Api/CreateRequestTest",
+    "model": "Location",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "CreateRequestTest",
+    "namespace": "Tests/Unit/Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "playground": true,
+    "suite": "unit",
+    "type": "playground-request-model",
+    "uses": [
+        "Tests/Unit/Playground/Crm/Api/PackageProviders",
+        "Playground/Test/Unit/Http/Requests/RequestCase"
+    ],
+    "models": [],
+    "package_providers": []
+}

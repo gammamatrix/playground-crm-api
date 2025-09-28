@@ -1,0 +1,19 @@
+{
+    "class": "",
+    "config": "playground-crm-api",
+    "fqdn": "",
+    "model": "Contact",
+    "model_fqdn": "",
+    "model_column": "",
+    "model_label": "",
+    "model_slug_plural": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "Contact",
+    "namespace": "Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "models": [],
+    "folder": "",
+    "type": "playground-api"
+}

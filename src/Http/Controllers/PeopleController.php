@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Crm\Api\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
@@ -44,14 +46,14 @@ class PeopleController extends Controller
         Requests\People\CreateRequest $request
     ): JsonResponse|Resources\People {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
-        $user = $request->user();
+        $validated = $request->validated();
 
         $people = new People($validated);
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -64,8 +66,11 @@ class PeopleController extends Controller
         People $people,
         Requests\People\EditRequest $request
     ): JsonResponse|Resources\People {
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -106,7 +111,7 @@ class PeopleController extends Controller
         Requests\People\LockRequest $request
     ): JsonResponse|Resources\People {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
@@ -118,8 +123,8 @@ class PeopleController extends Controller
 
         $people->save();
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -132,11 +137,20 @@ class PeopleController extends Controller
         Requests\People\IndexRequest $request
     ): JsonResponse|Resources\PeopleCollection {
 
-        $user = $request->user();
+        $packageInfo = $this->packageInfo();
 
+        /**
+         * @var array{
+         *     sort: string|array<mixed>,
+         *     filter: array{
+         *         trash: string
+         *     },
+         *     perPage: int
+         * } $validated
+         */
         $validated = $request->validated();
 
-        $query = People::addSelect(sprintf('%1$s.*', $this->packageInfo['table']));
+        $query = People::addSelect(sprintf('%1$s.*', $packageInfo->table()));
 
         $query->sort($validated['sort'] ?? null);
 
@@ -170,7 +184,7 @@ class PeopleController extends Controller
 
         $paginator->appends($validated);
 
-        return (new Resources\PeopleCollection($paginator))->response($request);
+        return new Resources\PeopleCollection($paginator)->response($request);
     }
 
     /**
@@ -183,16 +197,16 @@ class PeopleController extends Controller
         Requests\People\RestoreRequest $request
     ): JsonResponse|Resources\People {
 
+        $packageInfo = $this->packageInfo();
+
         $user = $request->user();
 
-        if ($user?->id) {
-            $people->modified_by_id = $user->id;
-        }
+        $people->modified_by_id = $user?->id;
 
         $people->restore();
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -205,8 +219,10 @@ class PeopleController extends Controller
         People $people,
         Requests\People\ShowRequest $request
     ): JsonResponse|Resources\People {
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -218,6 +234,8 @@ class PeopleController extends Controller
     public function store(
         Requests\People\StoreRequest $request
     ): Response|JsonResponse|Resources\People {
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
@@ -228,8 +246,8 @@ class PeopleController extends Controller
 
         $people->save();
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request)->setStatusCode(201);
     }
 
@@ -243,20 +261,18 @@ class PeopleController extends Controller
         Requests\People\UnlockRequest $request
     ): JsonResponse|Resources\People {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
         $people->locked = false;
 
-        if ($user?->id) {
-            $people->modified_by_id = $user->id;
-        }
+        $people->modified_by_id = $user?->id;
 
         $people->save();
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -270,18 +286,18 @@ class PeopleController extends Controller
         Requests\People\UpdateRequest $request
     ): JsonResponse {
 
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
 
-        if ($user?->id) {
-            $people->modified_by_id = $user->id;
-        }
+        $people->modified_by_id = $user?->id;
 
         $people->update($validated);
 
-        return (new Resources\People($people))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\People($people)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 }

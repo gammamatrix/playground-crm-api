@@ -1,0 +1,23 @@
+{
+    "class": "TestCase",
+    "config": "playground-crm-api",
+    "extends": "OrchestraTestCase",
+    "fqdn": "Tests/Feature/Playground/Crm/Api/TestCase",
+    "model": "",
+    "model_fqdn": "",
+    "module": "CRM",
+    "module_slug": "crm",
+    "name": "TestCase",
+    "namespace": "Tests/Feature/Playground/Crm/Api",
+    "organization": "Playground",
+    "package": "playground-crm-api",
+    "playground": true,
+    "suite": "feature",
+    "type": "playground-api-test-case",
+    "uses": [
+        "Tests/Unit/Playground/Crm/Api/PackageProviders",
+        "Playground/Test/OrchestraTestCase"
+    ],
+    "models": [],
+    "package_providers": []
+}

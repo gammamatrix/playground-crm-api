@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Playground
  */
@@ -91,11 +92,11 @@ return [
     */
 
     'routes' => [
-        'clients' => (bool) env('PLAYGROUND_CRM_API_CLIENTS', true),
-        'contacts' => (bool) env('PLAYGROUND_CRM_API_CONTACTS', true),
-        'locations' => (bool) env('PLAYGROUND_CRM_API_LOCATIONS', true),
-        'organizations' => (bool) env('PLAYGROUND_CRM_API_ORGANIZATIONS', true),
-        'people' => (bool) env('PLAYGROUND_CRM_API_PEOPLE', true),
+        'clients' => (bool) env('PLAYGROUND_CRM_API_ROUTES_CLIENTS', true),
+        'contacts' => (bool) env('PLAYGROUND_CRM_API_ROUTES_CONTACTS', true),
+        'locations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_LOCATIONS', true),
+        'organizations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_ORGANIZATIONS', true),
+        'people' => (bool) env('PLAYGROUND_CRM_API_ROUTES_PEOPLE', true),
     ],
 
     /*

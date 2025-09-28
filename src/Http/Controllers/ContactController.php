@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Crm\Api\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
@@ -44,14 +46,14 @@ class ContactController extends Controller
         Requests\Contact\CreateRequest $request
     ): JsonResponse|Resources\Contact {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
-        $user = $request->user();
+        $validated = $request->validated();
 
         $contact = new Contact($validated);
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -64,8 +66,11 @@ class ContactController extends Controller
         Contact $contact,
         Requests\Contact\EditRequest $request
     ): JsonResponse|Resources\Contact {
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -106,7 +111,7 @@ class ContactController extends Controller
         Requests\Contact\LockRequest $request
     ): JsonResponse|Resources\Contact {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
@@ -118,8 +123,8 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -132,11 +137,20 @@ class ContactController extends Controller
         Requests\Contact\IndexRequest $request
     ): JsonResponse|Resources\ContactCollection {
 
-        $user = $request->user();
+        $packageInfo = $this->packageInfo();
 
+        /**
+         * @var array{
+         *     sort: string|array<mixed>,
+         *     filter: array{
+         *         trash: string
+         *     },
+         *     perPage: int
+         * } $validated
+         */
         $validated = $request->validated();
 
-        $query = Contact::addSelect(sprintf('%1$s.*', $this->packageInfo['table']));
+        $query = Contact::addSelect(sprintf('%1$s.*', $packageInfo->table()));
 
         $query->sort($validated['sort'] ?? null);
 
@@ -170,7 +184,7 @@ class ContactController extends Controller
 
         $paginator->appends($validated);
 
-        return (new Resources\ContactCollection($paginator))->response($request);
+        return new Resources\ContactCollection($paginator)->response($request);
     }
 
     /**
@@ -183,16 +197,16 @@ class ContactController extends Controller
         Requests\Contact\RestoreRequest $request
     ): JsonResponse|Resources\Contact {
 
+        $packageInfo = $this->packageInfo();
+
         $user = $request->user();
 
-        if ($user?->id) {
-            $contact->modified_by_id = $user->id;
-        }
+        $contact->modified_by_id = $user?->id;
 
         $contact->restore();
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -205,8 +219,10 @@ class ContactController extends Controller
         Contact $contact,
         Requests\Contact\ShowRequest $request
     ): JsonResponse|Resources\Contact {
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -218,6 +234,8 @@ class ContactController extends Controller
     public function store(
         Requests\Contact\StoreRequest $request
     ): Response|JsonResponse|Resources\Contact {
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
@@ -228,8 +246,8 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request)->setStatusCode(201);
     }
 
@@ -243,20 +261,18 @@ class ContactController extends Controller
         Requests\Contact\UnlockRequest $request
     ): JsonResponse|Resources\Contact {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
         $contact->locked = false;
 
-        if ($user?->id) {
-            $contact->modified_by_id = $user->id;
-        }
+        $contact->modified_by_id = $user?->id;
 
         $contact->save();
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -270,18 +286,18 @@ class ContactController extends Controller
         Requests\Contact\UpdateRequest $request
     ): JsonResponse {
 
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
 
-        if ($user?->id) {
-            $contact->modified_by_id = $user->id;
-        }
+        $contact->modified_by_id = $user?->id;
 
         $contact->update($validated);
 
-        return (new Resources\Contact($contact))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Contact($contact)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 }

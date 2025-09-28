@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Crm\Api\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
@@ -44,14 +46,14 @@ class ClientController extends Controller
         Requests\Client\CreateRequest $request
     ): JsonResponse|Resources\Client {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
-        $user = $request->user();
+        $validated = $request->validated();
 
         $client = new Client($validated);
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -64,8 +66,11 @@ class ClientController extends Controller
         Client $client,
         Requests\Client\EditRequest $request
     ): JsonResponse|Resources\Client {
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -106,7 +111,7 @@ class ClientController extends Controller
         Requests\Client\LockRequest $request
     ): JsonResponse|Resources\Client {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
@@ -118,8 +123,8 @@ class ClientController extends Controller
 
         $client->save();
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -132,11 +137,20 @@ class ClientController extends Controller
         Requests\Client\IndexRequest $request
     ): JsonResponse|Resources\ClientCollection {
 
-        $user = $request->user();
+        $packageInfo = $this->packageInfo();
 
+        /**
+         * @var array{
+         *     sort: string|array<mixed>,
+         *     filter: array{
+         *         trash: string
+         *     },
+         *     perPage: int
+         * } $validated
+         */
         $validated = $request->validated();
 
-        $query = Client::addSelect(sprintf('%1$s.*', $this->packageInfo['table']));
+        $query = Client::addSelect(sprintf('%1$s.*', $packageInfo->table()));
 
         $query->sort($validated['sort'] ?? null);
 
@@ -170,7 +184,7 @@ class ClientController extends Controller
 
         $paginator->appends($validated);
 
-        return (new Resources\ClientCollection($paginator))->response($request);
+        return new Resources\ClientCollection($paginator)->response($request);
     }
 
     /**
@@ -183,16 +197,16 @@ class ClientController extends Controller
         Requests\Client\RestoreRequest $request
     ): JsonResponse|Resources\Client {
 
+        $packageInfo = $this->packageInfo();
+
         $user = $request->user();
 
-        if ($user?->id) {
-            $client->modified_by_id = $user->id;
-        }
+        $client->modified_by_id = $user?->id;
 
         $client->restore();
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -205,8 +219,10 @@ class ClientController extends Controller
         Client $client,
         Requests\Client\ShowRequest $request
     ): JsonResponse|Resources\Client {
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        $packageInfo = $this->packageInfo();
+
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -218,6 +234,8 @@ class ClientController extends Controller
     public function store(
         Requests\Client\StoreRequest $request
     ): Response|JsonResponse|Resources\Client {
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
@@ -228,8 +246,8 @@ class ClientController extends Controller
 
         $client->save();
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request)->setStatusCode(201);
     }
 
@@ -243,20 +261,18 @@ class ClientController extends Controller
         Requests\Client\UnlockRequest $request
     ): JsonResponse|Resources\Client {
 
-        $validated = $request->validated();
+        $packageInfo = $this->packageInfo();
 
         $user = $request->user();
 
         $client->locked = false;
 
-        if ($user?->id) {
-            $client->modified_by_id = $user->id;
-        }
+        $client->modified_by_id = $user?->id;
 
         $client->save();
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 
@@ -270,18 +286,18 @@ class ClientController extends Controller
         Requests\Client\UpdateRequest $request
     ): JsonResponse {
 
+        $packageInfo = $this->packageInfo();
+
         $validated = $request->validated();
 
         $user = $request->user();
 
-        if ($user?->id) {
-            $client->modified_by_id = $user->id;
-        }
+        $client->modified_by_id = $user?->id;
 
         $client->update($validated);
 
-        return (new Resources\Client($client))->additional(['meta' => [
-            'info' => $this->packageInfo,
+        return new Resources\Client($client)->additional(['meta' => [
+            'info' => $packageInfo,
         ]])->response($request);
     }
 }
