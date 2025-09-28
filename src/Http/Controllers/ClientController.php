@@ -60,7 +60,7 @@ class ClientController extends Controller
     /**
      * Edit the Client resource in storage.
      *
-     * @route GET /api/crm/clients/edit playground.crm.api.clients.edit
+     * @route GET /api/crm/clients/edit/{client} playground.crm.api.clients.edit
      */
     public function edit(
         Client $client,
@@ -219,6 +219,7 @@ class ClientController extends Controller
         Client $client,
         Requests\Client\ShowRequest $request
     ): JsonResponse|Resources\Client {
+
         $packageInfo = $this->packageInfo();
 
         return new Resources\Client($client)->additional(['meta' => [
@@ -234,6 +235,7 @@ class ClientController extends Controller
     public function store(
         Requests\Client\StoreRequest $request
     ): Response|JsonResponse|Resources\Client {
+
         $packageInfo = $this->packageInfo();
 
         $validated = $request->validated();

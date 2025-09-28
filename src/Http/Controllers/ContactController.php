@@ -60,7 +60,7 @@ class ContactController extends Controller
     /**
      * Edit the Contact resource in storage.
      *
-     * @route GET /api/crm/contacts/edit playground.crm.api.contacts.edit
+     * @route GET /api/crm/contacts/edit/{contact} playground.crm.api.contacts.edit
      */
     public function edit(
         Contact $contact,
@@ -219,6 +219,7 @@ class ContactController extends Controller
         Contact $contact,
         Requests\Contact\ShowRequest $request
     ): JsonResponse|Resources\Contact {
+
         $packageInfo = $this->packageInfo();
 
         return new Resources\Contact($contact)->additional(['meta' => [
@@ -234,6 +235,7 @@ class ContactController extends Controller
     public function store(
         Requests\Contact\StoreRequest $request
     ): Response|JsonResponse|Resources\Contact {
+
         $packageInfo = $this->packageInfo();
 
         $validated = $request->validated();

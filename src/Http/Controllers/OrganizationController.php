@@ -60,7 +60,7 @@ class OrganizationController extends Controller
     /**
      * Edit the Organization resource in storage.
      *
-     * @route GET /api/crm/organizations/edit playground.crm.api.organizations.edit
+     * @route GET /api/crm/organizations/edit/{organization} playground.crm.api.organizations.edit
      */
     public function edit(
         Organization $organization,
@@ -219,6 +219,7 @@ class OrganizationController extends Controller
         Organization $organization,
         Requests\Organization\ShowRequest $request
     ): JsonResponse|Resources\Organization {
+
         $packageInfo = $this->packageInfo();
 
         return new Resources\Organization($organization)->additional(['meta' => [
@@ -234,6 +235,7 @@ class OrganizationController extends Controller
     public function store(
         Requests\Organization\StoreRequest $request
     ): Response|JsonResponse|Resources\Organization {
+
         $packageInfo = $this->packageInfo();
 
         $validated = $request->validated();

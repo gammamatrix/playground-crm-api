@@ -60,7 +60,7 @@ class PeopleController extends Controller
     /**
      * Edit the People resource in storage.
      *
-     * @route GET /api/crm/people/edit playground.crm.api.people.edit
+     * @route GET /api/crm/people/edit/{people} playground.crm.api.people.edit
      */
     public function edit(
         People $people,
@@ -219,6 +219,7 @@ class PeopleController extends Controller
         People $people,
         Requests\People\ShowRequest $request
     ): JsonResponse|Resources\People {
+
         $packageInfo = $this->packageInfo();
 
         return new Resources\People($people)->additional(['meta' => [
@@ -234,6 +235,7 @@ class PeopleController extends Controller
     public function store(
         Requests\People\StoreRequest $request
     ): Response|JsonResponse|Resources\People {
+
         $packageInfo = $this->packageInfo();
 
         $validated = $request->validated();

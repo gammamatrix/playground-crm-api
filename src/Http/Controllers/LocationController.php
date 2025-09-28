@@ -60,7 +60,7 @@ class LocationController extends Controller
     /**
      * Edit the Location resource in storage.
      *
-     * @route GET /api/crm/locations/edit playground.crm.api.locations.edit
+     * @route GET /api/crm/locations/edit/{location} playground.crm.api.locations.edit
      */
     public function edit(
         Location $location,
@@ -219,6 +219,7 @@ class LocationController extends Controller
         Location $location,
         Requests\Location\ShowRequest $request
     ): JsonResponse|Resources\Location {
+
         $packageInfo = $this->packageInfo();
 
         return new Resources\Location($location)->additional(['meta' => [
@@ -234,6 +235,7 @@ class LocationController extends Controller
     public function store(
         Requests\Location\StoreRequest $request
     ): Response|JsonResponse|Resources\Location {
+
         $packageInfo = $this->packageInfo();
 
         $validated = $request->validated();
