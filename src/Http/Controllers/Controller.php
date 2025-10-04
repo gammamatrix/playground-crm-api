@@ -28,7 +28,7 @@ abstract class Controller extends BaseController
      */
     public array $packageInfo = [
         'module_label' => 'CRM',
-        'module_label_plural' => 'CRMS',
+        'module_label_plural' => 'CRMs',
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
         'privilege' => 'playground-crm-api',
