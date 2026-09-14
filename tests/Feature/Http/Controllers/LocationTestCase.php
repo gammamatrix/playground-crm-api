@@ -8,12 +8,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
+use Playground\Crm\Models\Location;
+
 /**
  * \Tests\Feature\Playground\Crm\Api\Http\Controllers\LocationTestCase
  */
-class LocationTestCase extends TestCase
+class LocationTestCase extends PlaygroundCase
 {
-    public string $fqdn = \Playground\Crm\Models\Location::class;
+    public string $fqdn = Location::class;
 
     protected int $status_code_json_guest_create = 401;
 
@@ -51,6 +53,8 @@ class LocationTestCase extends TestCase
         'model_route' => 'playground.crm.api.locations',
         'model_slug' => 'location',
         'model_slug_plural' => 'locations',
+        'model_variable' => 'location',
+        'model_variable_plural' => 'locations',
         'module_label' => 'CRM',
         'module_label_plural' => 'CRMS',
         'module_route' => 'playground.crm.api',
@@ -70,6 +74,10 @@ class LocationTestCase extends TestCase
         'owned_by_id',
         'parent_id',
         'matrix_id',
+        'client_id',
+        'contact_id',
+        'organization_id',
+        'people_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -82,8 +90,8 @@ class LocationTestCase extends TestCase
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -141,6 +149,7 @@ class LocationTestCase extends TestCase
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',

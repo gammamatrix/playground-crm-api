@@ -21,12 +21,10 @@
         "gammamatrix/playground": "*",
         "gammamatrix/playground-auth": "*",
         "gammamatrix/playground-http": "*",
-        "gammamatrix/playground-crm": "*",
-        "illuminate/support": "^12.0"
+        "gammamatrix/playground-crm": "*"
     },
     "require-dev": {
         "gammamatrix/playground-test": "*",
-        "illuminate/testing": "^12.0",
         "laravel/sanctum": "^4.0"
     },
     "autoload": {
@@ -49,7 +47,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-develop": "74.x-dev"
+            "dev-develop": "75.x-dev"
         },
         "laravel": {
             "providers": [

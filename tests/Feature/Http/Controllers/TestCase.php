@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Model;
-use Playground\Test\Feature\Http\Controllers\Resource;
 use Tests\Feature\Playground\Crm\Api\TestCase as BaseTestCase;
 
 /**
@@ -17,18 +16,10 @@ use Tests\Feature\Playground\Crm\Api\TestCase as BaseTestCase;
  */
 class TestCase extends BaseTestCase
 {
-    use Resource\Playground\CreateJsonTrait;
-    use Resource\Playground\DestroyJsonTrait;
-    use Resource\Playground\EditJsonTrait;
-    use Resource\Playground\IndexJsonTrait;
-    use Resource\Playground\LockJsonTrait;
-    use Resource\Playground\RestoreJsonTrait;
-    use Resource\Playground\ShowJsonTrait;
-    use Resource\Playground\StoreJsonTrait;
-    use Resource\Playground\UnlockJsonTrait;
-    use Resource\Playground\UpdateJsonTrait;
-
-    protected bool $setUpUserForPlayground = true;
+    /**
+     * @var class-string<Model>
+     */
+    public string $fqdn = Model::class;
 
     /**
      * @var array<string, string>
@@ -40,6 +31,8 @@ class TestCase extends BaseTestCase
         'model_route' => '',
         'model_slug' => '',
         'model_slug_plural' => '',
+        'model_variable' => '',
+        'model_variable_plural' => '',
         'module_label' => 'CRM',
         'module_label_plural' => 'CRMS',
         'module_route' => 'playground.crm.api',
@@ -48,11 +41,6 @@ class TestCase extends BaseTestCase
         'table' => '',
         'view' => 'playground-crm-api::',
     ];
-
-    /**
-     * @var class-string<Model>
-     */
-    public string $fqdn = Model::class;
 
     /**
      * @var array<int, string>

@@ -19,7 +19,7 @@
     "playground": true,
     "revision": false,
     "models": {
-        "Client": "resources/configurations/playground-crm/model.client.json"
+        "Client": "resources/configurations/playground-crm/client/model.json"
     },
     "policies": [],
     "requests": [],
@@ -45,6 +45,8 @@
         "model_route": "playground.crm.api.clients",
         "model_slug": "client",
         "model_slug_plural": "clients",
+        "model_variable": "client",
+        "model_variable_plural": "clients",
         "module_label": "CRM",
         "module_label_plural": "CRMs",
         "module_route": "playground.crm.api",

@@ -28,9 +28,11 @@ class PeopleController extends Controller
         'model_label_plural' => 'People',
         'model_route' => 'playground.crm.api.people',
         'model_slug' => 'people',
-        'model_slug_plural' => 'people',
+        'model_slug_plural' => 'peoples',
+        'model_variable' => 'people',
+        'model_variable_plural' => 'peoples',
         'module_label' => 'CRM',
-        'module_label_plural' => 'CRMS',
+        'module_label_plural' => 'CRMs',
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
         'privilege' => 'playground-crm-api:people',
@@ -40,7 +42,7 @@ class PeopleController extends Controller
     /**
      * Create the People resource in storage.
      *
-     * @route GET /api/crm/people/create playground.crm.api.people.create
+     * @route GET /api/crm/peoples/create playground.crm.api.people.create
      */
     public function create(
         Requests\People\CreateRequest $request
@@ -60,7 +62,7 @@ class PeopleController extends Controller
     /**
      * Edit the People resource in storage.
      *
-     * @route GET /api/crm/people/edit/{people} playground.crm.api.people.edit
+     * @route GET /api/crm/peoples/edit/{people} playground.crm.api.people.edit
      */
     public function edit(
         People $people,
@@ -77,7 +79,7 @@ class PeopleController extends Controller
     /**
      * Remove the People resource from storage.
      *
-     * @route DELETE /api/crm/people/{people} playground.crm.api.people.destroy
+     * @route DELETE /api/crm/peoples/{people} playground.crm.api.people.destroy
      */
     public function destroy(
         People $people,
@@ -104,7 +106,7 @@ class PeopleController extends Controller
     /**
      * Lock the People resource in storage.
      *
-     * @route PUT /api/crm/people/{people} playground.crm.api.people.lock
+     * @route PUT /api/crm/peoples/{people} playground.crm.api.people.lock
      */
     public function lock(
         People $people,
@@ -131,7 +133,7 @@ class PeopleController extends Controller
     /**
      * Display a listing of People resources.
      *
-     * @route GET /api/crm/people playground.crm.api.people
+     * @route GET /api/crm/peoples playground.crm.api.people
      */
     public function index(
         Requests\People\IndexRequest $request
@@ -190,7 +192,7 @@ class PeopleController extends Controller
     /**
      * Restore the People resource from the trash.
      *
-     * @route PUT /api/crm/people/restore/{people} playground.crm.api.people.restore
+     * @route PUT /api/crm/peoples/restore/{people} playground.crm.api.people.restore
      */
     public function restore(
         People $people,
@@ -213,7 +215,7 @@ class PeopleController extends Controller
     /**
      * Display the People resource.
      *
-     * @route GET /api/crm/people/{people} playground.crm.api.people.show
+     * @route GET /api/crm/peoples/{people} playground.crm.api.people.show
      */
     public function show(
         People $people,
@@ -230,7 +232,7 @@ class PeopleController extends Controller
     /**
      * Store a newly created API People resource in storage.
      *
-     * @route POST /api/crm/people playground.crm.api.people.post
+     * @route POST /api/crm/peoples playground.crm.api.people.post
      */
     public function store(
         Requests\People\StoreRequest $request
@@ -256,7 +258,7 @@ class PeopleController extends Controller
     /**
      * Unlock the People resource in storage.
      *
-     * @route DELETE /api/crm/people/lock/{people} playground.crm.api.people.unlock
+     * @route DELETE /api/crm/peoples/lock/{people} playground.crm.api.people.unlock
      */
     public function unlock(
         People $people,
@@ -281,7 +283,7 @@ class PeopleController extends Controller
     /**
      * Update the People resource in storage.
      *
-     * @route PATCH /api/crm/people/{people} playground.crm.api.people.patch
+     * @route PATCH /api/crm/peoples/{people} playground.crm.api.people.patch
      */
     public function update(
         People $people,

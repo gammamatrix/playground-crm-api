@@ -7,6 +7,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
+use Playground\Crm\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,19 +37,19 @@ Route::group([
     Route::get('/', [
         'as' => 'playground.crm.api.contacts',
         'uses' => 'ContactController@index',
-    ])->can('index', Playground\Crm\Models\Contact::class);
+    ])->can('index', Contact::class);
 
     Route::post('/index', [
         'as' => 'playground.crm.api.contacts.index',
         'uses' => 'ContactController@index',
-    ])->can('index', Playground\Crm\Models\Contact::class);
+    ])->can('index', Contact::class);
 
     // UI
 
     Route::get('/create', [
         'as' => 'playground.crm.api.contacts.create',
         'uses' => 'ContactController@create',
-    ])->can('create', Playground\Crm\Models\Contact::class);
+    ])->can('create', Contact::class);
 
     Route::get('/edit/{contact}', [
         'as' => 'playground.crm.api.contacts.edit',
@@ -90,7 +91,7 @@ Route::group([
     Route::post('/', [
         'as' => 'playground.crm.api.contacts.post',
         'uses' => 'ContactController@store',
-    ])->can('store', Playground\Crm\Models\Contact::class);
+    ])->can('store', Contact::class);
 
     // Route::put('/', [
     //     'as' => 'playground.crm.api.contacts.put',

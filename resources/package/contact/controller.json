@@ -19,7 +19,7 @@
     "playground": true,
     "revision": false,
     "models": {
-        "Contact": "resources/configurations/playground-crm/model.contact.json"
+        "Contact": "resources/configurations/playground-crm/contact/model.json"
     },
     "policies": [],
     "requests": [],
@@ -45,6 +45,8 @@
         "model_route": "playground.crm.api.contacts",
         "model_slug": "contact",
         "model_slug_plural": "contacts",
+        "model_variable": "contact",
+        "model_variable_plural": "contacts",
         "module_label": "CRM",
         "module_label_plural": "CRMs",
         "module_route": "playground.crm.api",

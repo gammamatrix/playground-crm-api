@@ -8,12 +8,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
+use Playground\Crm\Models\People;
+
 /**
  * \Tests\Feature\Playground\Crm\Api\Http\Controllers\PeopleTestCase
  */
-class PeopleTestCase extends TestCase
+class PeopleTestCase extends PlaygroundCase
 {
-    public string $fqdn = \Playground\Crm\Models\People::class;
+    public string $fqdn = People::class;
 
     protected int $status_code_json_guest_create = 401;
 
@@ -47,10 +49,12 @@ class PeopleTestCase extends TestCase
     public array $packageInfo = [
         'model_attribute' => 'title',
         'model_label' => 'People',
-        'model_label_plural' => 'People',
+        'model_label_plural' => 'Peoples',
         'model_route' => 'playground.crm.api.people',
         'model_slug' => 'people',
-        'model_slug_plural' => 'people',
+        'model_slug_plural' => 'peoples',
+        'model_variable' => 'people',
+        'model_variable_plural' => 'peoples',
         'module_label' => 'CRM',
         'module_label_plural' => 'CRMS',
         'module_route' => 'playground.crm.api',
@@ -70,6 +74,10 @@ class PeopleTestCase extends TestCase
         'owned_by_id',
         'parent_id',
         'matrix_id',
+        'client_id',
+        'contact_id',
+        'location_id',
+        'organization_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -82,8 +90,8 @@ class PeopleTestCase extends TestCase
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -141,6 +149,7 @@ class PeopleTestCase extends TestCase
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',

@@ -5,6 +5,8 @@
     "fqdn": "Tests/Unit/Playground/Crm/Api/UpdateRequestTest",
     "model": "Location",
     "model_fqdn": "",
+    "model_variable": "",
+    "model_variable_plural": "",
     "module": "CRM",
     "module_slug": "crm",
     "name": "UpdateRequestTest",

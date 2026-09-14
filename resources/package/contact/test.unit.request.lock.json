@@ -5,6 +5,8 @@
     "fqdn": "Tests/Unit/Playground/Crm/Api/LockRequestTest",
     "model": "Contact",
     "model_fqdn": "",
+    "model_variable": "",
+    "model_variable_plural": "",
     "module": "CRM",
     "module_slug": "crm",
     "name": "LockRequestTest",

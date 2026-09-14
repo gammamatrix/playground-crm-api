@@ -7,6 +7,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
+use Playground\Crm\Models\People;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,26 +30,26 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'api/crm/people',
+    'prefix' => 'api/crm/peoples',
     'middleware' => config('playground-crm-api.middleware.default'),
     'namespace' => '\Playground\Crm\Api\Http\Controllers',
 ], function () {
     Route::get('/', [
         'as' => 'playground.crm.api.people',
         'uses' => 'PeopleController@index',
-    ])->can('index', Playground\Crm\Models\People::class);
+    ])->can('index', People::class);
 
     Route::post('/index', [
         'as' => 'playground.crm.api.people.index',
         'uses' => 'PeopleController@index',
-    ])->can('index', Playground\Crm\Models\People::class);
+    ])->can('index', People::class);
 
     // UI
 
     Route::get('/create', [
         'as' => 'playground.crm.api.people.create',
         'uses' => 'PeopleController@create',
-    ])->can('create', Playground\Crm\Models\People::class);
+    ])->can('create', People::class);
 
     Route::get('/edit/{people}', [
         'as' => 'playground.crm.api.people.edit',
@@ -90,7 +91,7 @@ Route::group([
     Route::post('/', [
         'as' => 'playground.crm.api.people.post',
         'uses' => 'PeopleController@store',
-    ])->can('store', Playground\Crm\Models\People::class);
+    ])->can('store', People::class);
 
     // Route::put('/', [
     //     'as' => 'playground.crm.api.people.put',

@@ -8,12 +8,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
+use Playground\Crm\Models\Organization;
+
 /**
  * \Tests\Feature\Playground\Crm\Api\Http\Controllers\OrganizationTestCase
  */
-class OrganizationTestCase extends TestCase
+class OrganizationTestCase extends PlaygroundCase
 {
-    public string $fqdn = \Playground\Crm\Models\Organization::class;
+    public string $fqdn = Organization::class;
 
     protected int $status_code_json_guest_create = 401;
 
@@ -51,6 +53,8 @@ class OrganizationTestCase extends TestCase
         'model_route' => 'playground.crm.api.organizations',
         'model_slug' => 'organization',
         'model_slug_plural' => 'organizations',
+        'model_variable' => 'organization',
+        'model_variable_plural' => 'organizations',
         'module_label' => 'CRM',
         'module_label_plural' => 'CRMS',
         'module_route' => 'playground.crm.api',
@@ -70,6 +74,10 @@ class OrganizationTestCase extends TestCase
         'owned_by_id',
         'parent_id',
         'matrix_id',
+        'client_id',
+        'contact_id',
+        'location_id',
+        'people_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -82,8 +90,8 @@ class OrganizationTestCase extends TestCase
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -141,6 +149,7 @@ class OrganizationTestCase extends TestCase
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',

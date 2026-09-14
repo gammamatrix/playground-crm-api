@@ -8,12 +8,14 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Playground\Crm\Api\Http\Controllers;
 
+use Playground\Crm\Models\Client;
+
 /**
  * \Tests\Feature\Playground\Crm\Api\Http\Controllers\ClientTestCase
  */
-class ClientTestCase extends TestCase
+class ClientTestCase extends PlaygroundCase
 {
-    public string $fqdn = \Playground\Crm\Models\Client::class;
+    public string $fqdn = Client::class;
 
     protected int $status_code_json_guest_create = 401;
 
@@ -51,6 +53,8 @@ class ClientTestCase extends TestCase
         'model_route' => 'playground.crm.api.clients',
         'model_slug' => 'client',
         'model_slug_plural' => 'clients',
+        'model_variable' => 'client',
+        'model_variable_plural' => 'clients',
         'module_label' => 'CRM',
         'module_label_plural' => 'CRMS',
         'module_route' => 'playground.crm.api',
@@ -70,6 +74,10 @@ class ClientTestCase extends TestCase
         'owned_by_id',
         'parent_id',
         'matrix_id',
+        'contact_id',
+        'location_id',
+        'organization_id',
+        'people_id',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -82,8 +90,8 @@ class ClientTestCase extends TestCase
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -141,6 +149,7 @@ class ClientTestCase extends TestCase
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',

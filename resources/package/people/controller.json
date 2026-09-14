@@ -19,7 +19,7 @@
     "playground": true,
     "revision": false,
     "models": {
-        "People": "resources/configurations/playground-crm/model.people.json"
+        "People": "resources/configurations/playground-crm/people/model.json"
     },
     "policies": [],
     "requests": [],
@@ -29,7 +29,7 @@
     "extends": "Controller",
     "extends_use": "",
     "slug": "people",
-    "slug_plural": "people",
+    "slug_plural": "peoples",
     "model_route": "playground.crm.api.people",
     "module_route": "playground.crm.api",
     "privilege": "playground-crm-api:people",
@@ -45,6 +45,8 @@
         "model_route": "playground.crm.api.people",
         "model_slug": "people",
         "model_slug_plural": "people",
+        "model_variable": "people",
+        "model_variable_plural": "peoples",
         "module_label": "CRM",
         "module_label_plural": "CRMs",
         "module_route": "playground.crm.api",

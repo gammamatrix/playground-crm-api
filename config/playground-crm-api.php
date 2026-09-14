@@ -5,9 +5,58 @@
  */
 
 declare(strict_types=1);
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Routing\Middleware\SubstituteBindings;
+use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use Playground\Auth\Policies\Policy;
+use Playground\Crm\Api\Policies\ClientPolicy;
+use Playground\Crm\Api\Policies\ContactPolicy;
+use Playground\Crm\Api\Policies\LocationPolicy;
+use Playground\Crm\Api\Policies\OrganizationPolicy;
+use Playground\Crm\Api\Policies\PeoplePolicy;
+use Playground\Crm\Models\Client;
+use Playground\Crm\Models\Contact;
+use Playground\Crm\Models\Location;
+use Playground\Crm\Models\Organization;
+use Playground\Crm\Models\People;
 
 /**
  * Playground: CRM API Configuration and Environment Variables
+ *
+ * @return array{
+ *       about: bool,
+ *       load: array{
+ *           policies: bool,
+ *           routes: bool,
+ *           translations: bool
+ *       },
+ *       matrix: array{
+ *           enabled: bool,
+ *       },
+ *       middleware: array{
+ *           default: string|string[],
+ *           auth: string|string[],
+ *           guest: string|string[]
+ *       },
+ *       policies: array<
+ *           class-string<Model>,
+ *           class-string<Policy>
+ *       >,
+ *       routes: array{
+ *           clients: bool,
+ *           contacts: bool,
+ *           locations: bool,
+ *           organizations: bool,
+ *           peoples: bool,
+ *       },
+ *       abilities: array<string, string[]>,
+ *       sitemap: array{
+ *            enable: bool,
+ *            guest: bool,
+ *            user: bool,
+ *            view: string
+ *       }
+ *   }
  */
 return [
 
@@ -41,6 +90,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Matrix
+    |--------------------------------------------------------------------------
+    |
+    |
+    */
+
+    'matrix' => [
+        'enabled' => (bool) env('PLAYGROUND_CRM_API_MATRIX_ENABLED', false),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Middleware
     |--------------------------------------------------------------------------
     |
@@ -50,20 +111,20 @@ return [
     'middleware' => [
         'default' => env('PLAYGROUND_CRM_API_MIDDLEWARE_DEFAULT', [
             'web',
-            Illuminate\Routing\Middleware\SubstituteBindings::class,
+            SubstituteBindings::class,
             'auth:sanctum',
-            Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            EnsureFrontendRequestsAreStateful::class,
         ]),
         'auth' => env('PLAYGROUND_CRM_API_MIDDLEWARE_AUTH', [
             'web',
-            Illuminate\Routing\Middleware\SubstituteBindings::class,
+            SubstituteBindings::class,
             'auth:sanctum',
-            Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            EnsureFrontendRequestsAreStateful::class,
         ]),
         'guest' => env('PLAYGROUND_CRM_API_MIDDLEWARE_GUEST', [
             'web',
-            Illuminate\Routing\Middleware\SubstituteBindings::class,
-            Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+            SubstituteBindings::class,
+            EnsureFrontendRequestsAreStateful::class,
         ]),
     ],
 
@@ -76,11 +137,11 @@ return [
     */
 
     'policies' => [
-        Playground\Crm\Models\Client::class => Playground\Crm\Api\Policies\ClientPolicy::class,
-        Playground\Crm\Models\Contact::class => Playground\Crm\Api\Policies\ContactPolicy::class,
-        Playground\Crm\Models\Location::class => Playground\Crm\Api\Policies\LocationPolicy::class,
-        Playground\Crm\Models\Organization::class => Playground\Crm\Api\Policies\OrganizationPolicy::class,
-        Playground\Crm\Models\People::class => Playground\Crm\Api\Policies\PeoplePolicy::class,
+        Client::class => ClientPolicy::class,
+        Contact::class => ContactPolicy::class,
+        Location::class => LocationPolicy::class,
+        Organization::class => OrganizationPolicy::class,
+        People::class => PeoplePolicy::class,
     ],
 
     /*
@@ -96,7 +157,7 @@ return [
         'contacts' => (bool) env('PLAYGROUND_CRM_API_ROUTES_CONTACTS', true),
         'locations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_LOCATIONS', true),
         'organizations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_ORGANIZATIONS', true),
-        'people' => (bool) env('PLAYGROUND_CRM_API_ROUTES_PEOPLE', true),
+        'peoples' => (bool) env('PLAYGROUND_CRM_API_ROUTES_PEOPLES', true),
     ],
 
     /*
