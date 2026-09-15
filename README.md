@@ -4,9 +4,20 @@
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-crm-api/testing/develop/coverage.svg)](tests)
 [![PHPStan Level 10](https://img.shields.io/badge/PHPStan-level%2010-brightgreen)](.github/workflows/ci.yml#L128)
 
-The Playground: CRM API package.
+Playground: CRM API
+
+This package provides an API without UI for interacting with the [Playground: CRM](https://github.com/gammamatrix/playground-crm), a model package for Laravel.
+
+If you need a JSON API with a UI, then have a look at [Playground: CRM Resource.](https://github.com/gammamatrix/playground-crm-resource)
 
 ## Documentation
+
+Read more on using [Playground: CRM API at Read the Docs: Playground Documentation](https://gammamatrix-playground.readthedocs.io/en/develop/built-components/crm.html)
+
+### Postman
+
+A postman collection is provided in the repository: [postman-playground-crm-api.json.](postman-playground-crm-api.json)
+- This same collection is viewable on the [.]()
 
 ### OpenAPI
 
@@ -21,13 +32,13 @@ See [package.json](package.json) requirements.
 
 Install npm.
 
-```sh
+```shell
 npm install
 ```
 
 Build the documentation to generate the [openapi.yaml](openapi.yaml) configuration.
 
-```sh
+```shell
 npm run docs
 ```
 
@@ -38,45 +49,69 @@ Documentation
 
 You can install the package via composer:
 
-```bash
+```shell
 composer require gammamatrix/playground-crm-api
 ```
 
+## `artisan about`
+
+Playground provides information in the `artisan about` command.
+
+<!-- <img src="resources/docs/artisan-about-playground-crm-api.png" alt="screenshot of artisan about command with Playground: CRM API."> -->
+
 ## Configuration
 
-All options are disabled by default.
-
-See the contents of the published config file: [config/playground-crm-api.php](config/playground-crm-api.php)
-
 You can publish the config file with:
-```bash
+
+```shell
 php artisan vendor:publish --provider="Playground\Crm\Api\ServiceProvider" --tag="playground-config"
 ```
 
+All routes are enabled by default. They may be disabled via environment variable or the configuration.
+
+See the contents of the published config file: [config/playground-crm-api.php](config/playground-crm-api.php)
+
+You can publish the routes file with:
+```bash
+php artisan vendor:publish --provider="Playground\Crm\Api\ServiceProvider" --tag="playground-routes"
+```
+- The routes while be published in a folder at `routes/playground-crm-api`
+
+### Environment Variables
+
+If you are unable or do not want to publish [configuration files for this package](config/playground-crm-api.php),
+you may override the options via system environment variables.
+
+Information on [environment variables is available on the wiki for this package](https://github.com/gammamatrix/playground-crm-api/wiki/Environment-Variables)
+
+## Migrations
+
+This package requires the migrations in [playground-crm](https://github.com/gammamatrix/playground-crm) a Laravel package.
+
 ## Cloc
 
-```sh
+```shell
 composer cloc
 ```
 
-```
+```terminaloutput
 ➜  playground-crm-api git:(develop) ✗ composer cloc
-     392 text files.
-     382 unique files.
-      96 files ignored.
+     395 text files.
+     384 unique files.                                          
+     253 files ignored.
 
-github.com/AlDanial/cloc v 2.06  T=0.14 s (2671.6 files/s, 297184.8 lines/s)
+github.com/AlDanial/cloc v 2.08  T=0.16 s (2459.0 files/s, 278334.8 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-JSON                           161              0              0          20582
-YAML                            54              5              0          11280
-PHP                            153           1452           1941           6265
-XML                             10              0              7            798
-Markdown                         3             40              0            108
+JSON                           162              0              0          20748
+YAML                            54              4              0          11433
+PHP                            154           1464           1989           6540
+XML                             10              0              7           1082
+Markdown                         3             55              1            127
 INI                              1              3              0             12
 -------------------------------------------------------------------------------
-SUM:                           382           1500           1948          39045
+SUM:                           384           1526           1997          39942
 -------------------------------------------------------------------------------
 ```
 
@@ -89,30 +124,30 @@ Tests at level 10 on:
 - `tests/Feature/`
 - `tests/Unit/`
 
-```sh
+```shell
 composer analyse
 ```
 
 ## Coding Standards
 
-```sh
+```shell
 composer format
 ```
 
 ## Testing
 
 Run unit tests:
-```sh
+```shell
 composer test
 ```
 
 Run unit and feature tests:
-```sh
+```shell
 composer test-dev
 ```
 
 Run unit and feature tests in parallel:
-```sh
+```shell
 composer test-parallel
 ```
 
