@@ -49,8 +49,8 @@ class PeopleTestCase extends PlaygroundCase
     public array $packageInfo = [
         'model_attribute' => 'title',
         'model_label' => 'People',
-        'model_label_plural' => 'Peoples',
-        'model_route' => 'playground.crm.api.people',
+        'model_label_plural' => 'People',
+        'model_route' => 'playground.crm.api.peoples',
         'model_slug' => 'people',
         'model_slug_plural' => 'peoples',
         'model_variable' => 'people',

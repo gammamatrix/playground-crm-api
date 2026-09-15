@@ -1,7 +1,7 @@
 {
-    "class": "people",
+    "class": "peoples",
     "config": "playground-crm-api",
-    "fqdn": "people",
+    "fqdn": "peoples",
     "module": "CRM",
     "module_slug": "crm",
     "name": "People",
@@ -17,9 +17,9 @@
     "model_fqdn": "Playground/Crm/Models/People",
     "model_label": "People",
     "model_slug": "people",
-    "model_slug_plural": "people",
+    "model_slug_plural": "peoples",
     "type": "playground-api",
-    "route": "playground.crm.api.people",
-    "route_prefix": "api/crm/people",
+    "route": "playground.crm.api.peoples",
+    "route_prefix": "api/crm/peoples",
     "title": ""
 }

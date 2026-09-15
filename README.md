@@ -72,7 +72,7 @@ All routes are enabled by default. They may be disabled via environment variable
 See the contents of the published config file: [config/playground-crm-api.php](config/playground-crm-api.php)
 
 You can publish the routes file with:
-```bash
+```shell
 php artisan vendor:publish --provider="Playground\Crm\Api\ServiceProvider" --tag="playground-routes"
 ```
 - The routes while be published in a folder at `routes/playground-crm-api`
@@ -96,22 +96,22 @@ composer cloc
 
 ```terminaloutput
 ➜  playground-crm-api git:(develop) ✗ composer cloc
-     395 text files.
-     384 unique files.                                          
-     253 files ignored.
+      0 text files.
+      0 unique files.
+      0 files ignored.
 
-github.com/AlDanial/cloc v 2.08  T=0.16 s (2459.0 files/s, 278334.8 lines/s)
+github.com/AlDanial/cloc v 1.98  T=0.0 s (0.0 files/s, 0.0 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-JSON                           162              0              0          20748
-YAML                            54              4              0          11433
-PHP                            154           1464           1989           6540
-XML                             10              0              7           1082
-Markdown                         3             55              1            127
-INI                              1              3              0             12
+JSON                             0              0              0              0
+PHP                              0              0              0              0
+YAML                             0              0              0              0
+XML                              0              0              0              0
+Markdown                         0              0              0              0
+INI                              0              0              0              0
 -------------------------------------------------------------------------------
-SUM:                           384           1526           1997          39942
+SUM:                             0              0              0              0
 -------------------------------------------------------------------------------
 ```
 
