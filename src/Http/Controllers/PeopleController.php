@@ -36,7 +36,7 @@ class PeopleController extends Controller
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
         'privilege' => 'playground-crm-api:people',
-        'table' => 'crm_people',
+        'table' => 'crm_peoples',
     ];
 
     /**

@@ -110,7 +110,7 @@ class UpdateRequest extends BaseUpdateRequest
         '_return_url' => ['nullable', 'url'],
     ];
 
-    protected string $slug_table = 'crm_people';
+    protected string $slug_table = 'crm_peoples';
 
     /**
      * Prepare the data for validation.

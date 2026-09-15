@@ -89,7 +89,6 @@
         "contacts": "resources/package/contact/route.json",
         "locations": "resources/package/location/route.json",
         "organizations": "resources/package/organization/route.json",
-        "people": "",
         "peoples": "resources/package/people/route.json"
     },
     "seeders": [],
