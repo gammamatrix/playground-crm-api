@@ -32,7 +32,7 @@
     "extends": "Controller",
     "extends_use": "",
     "slug": "client",
-    "slug_plural": "",
+    "slug_plural": "clients",
     "model_route": "playground.crm.api.clients",
     "module_route": "playground.crm.api",
     "model_camel": "client",

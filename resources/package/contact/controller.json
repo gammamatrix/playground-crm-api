@@ -32,7 +32,7 @@
     "extends": "Controller",
     "extends_use": "",
     "slug": "contact",
-    "slug_plural": "",
+    "slug_plural": "contacts",
     "model_route": "playground.crm.api.contacts",
     "module_route": "playground.crm.api",
     "model_camel": "contact",

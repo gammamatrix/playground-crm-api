@@ -1,7 +1,7 @@
 {
-    "class": "",
+    "class": "clients",
     "config": "playground-crm-api",
-    "fqdn": "",
+    "fqdn": "clients",
     "module": "CRM",
     "module_slug": "crm",
     "name": "Client",
@@ -13,7 +13,7 @@
     "folder": "client",
     "models": [],
     "model": "Client",
-    "model_column": "",
+    "model_column": "client",
     "model_fqdn": "Playground/Crm/Models/Client",
     "model_slug_plural": "",
     "model_camel": "client",
@@ -34,6 +34,6 @@
     "model_variables": "clients",
     "type": "playground-api",
     "route": "playground.crm.api.clients",
-    "route_prefix": "api/crm/",
+    "route_prefix": "api/crm/clients",
     "title": ""
 }

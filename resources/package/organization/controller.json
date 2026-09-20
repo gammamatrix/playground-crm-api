@@ -32,7 +32,7 @@
     "extends": "Controller",
     "extends_use": "",
     "slug": "organization",
-    "slug_plural": "",
+    "slug_plural": "organizations",
     "model_route": "playground.crm.api.organizations",
     "module_route": "playground.crm.api",
     "model_camel": "organization",

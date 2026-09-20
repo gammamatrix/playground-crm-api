@@ -31,7 +31,7 @@
     "extends_use": "",
     "slug": "",
     "slug_plural": "",
-    "model_route": "playground.crm.api.",
+    "model_route": "",
     "module_route": "playground.crm.api",
     "model_camel": "",
     "model_camels": "",
@@ -51,7 +51,7 @@
     "model_variables": "",
     "privilege": "playground-crm-api",
     "route": "playground.crm.api",
-    "view": "playground-crm-api",
+    "view": "",
     "implements": [],
     "uses": [],
     "packageInfo": {
@@ -66,7 +66,7 @@
         "model_label": "",
         "model_labels": "",
         "model_label_plural": "",
-        "model_route": "playground.crm.api.",
+        "model_route": "",
         "model_slug": "",
         "model_slugs": "",
         "model_slug_plural": "",
@@ -83,7 +83,6 @@
         "module_slug": "crm",
         "module_slugs": "crms",
         "privilege": "playground-crm-api",
-        "table": "",
-        "view": "playground-crm-api"
+        "table": ""
     }
 }

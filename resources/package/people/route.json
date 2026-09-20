@@ -1,7 +1,7 @@
 {
-    "class": "",
+    "class": "peoples",
     "config": "playground-crm-api",
-    "fqdn": "",
+    "fqdn": "peoples",
     "module": "CRM",
     "module_slug": "crm",
     "name": "People",
@@ -13,7 +13,7 @@
     "folder": "people",
     "models": [],
     "model": "People",
-    "model_column": "",
+    "model_column": "people",
     "model_fqdn": "Playground/Crm/Models/People",
     "model_slug_plural": "",
     "model_camel": "people",
@@ -34,6 +34,6 @@
     "model_variables": "peoples",
     "type": "playground-api",
     "route": "playground.crm.api.peoples",
-    "route_prefix": "api/crm/",
+    "route_prefix": "api/crm/peoples",
     "title": ""
 }

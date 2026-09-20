@@ -1,7 +1,7 @@
 {
-    "class": "",
+    "class": "locations",
     "config": "playground-crm-api",
-    "fqdn": "",
+    "fqdn": "locations",
     "module": "CRM",
     "module_slug": "crm",
     "name": "Location",
@@ -13,7 +13,7 @@
     "folder": "location",
     "models": [],
     "model": "Location",
-    "model_column": "",
+    "model_column": "location",
     "model_fqdn": "Playground/Crm/Models/Location",
     "model_slug_plural": "",
     "model_camel": "location",
@@ -34,6 +34,6 @@
     "model_variables": "locations",
     "type": "playground-api",
     "route": "playground.crm.api.locations",
-    "route_prefix": "api/crm/",
+    "route_prefix": "api/crm/locations",
     "title": ""
 }

@@ -32,7 +32,7 @@
     "extends": "Controller",
     "extends_use": "",
     "slug": "location",
-    "slug_plural": "",
+    "slug_plural": "locations",
     "model_route": "playground.crm.api.locations",
     "module_route": "playground.crm.api",
     "model_camel": "location",

@@ -1,7 +1,7 @@
 {
-    "class": "",
+    "class": "contacts",
     "config": "playground-crm-api",
-    "fqdn": "",
+    "fqdn": "contacts",
     "module": "CRM",
     "module_slug": "crm",
     "name": "Contact",
@@ -13,7 +13,7 @@
     "folder": "contact",
     "models": [],
     "model": "Contact",
-    "model_column": "",
+    "model_column": "contact",
     "model_fqdn": "Playground/Crm/Models/Contact",
     "model_slug_plural": "",
     "model_camel": "contact",
@@ -34,6 +34,6 @@
     "model_variables": "contacts",
     "type": "playground-api",
     "route": "playground.crm.api.contacts",
-    "route_prefix": "api/crm/",
+    "route_prefix": "api/crm/contacts",
     "title": ""
 }
