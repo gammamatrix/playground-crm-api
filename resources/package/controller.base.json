@@ -80,8 +80,8 @@
         "module_labels": "CRMs",
         "module_label_plural": "CRMs",
         "module_route": "playground.crm.api",
-        "module_slug": "",
-        "module_slugs": "",
+        "module_slug": "crm",
+        "module_slugs": "crms",
         "privilege": "playground-crm-api",
         "table": "",
         "view": "playground-crm-api"
