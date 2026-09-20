@@ -24,17 +24,32 @@ class PeopleController extends Controller
      */
     public array $packageInfo = [
         'model_attribute' => 'title',
+        'model_camel' => 'people',
+        'model_camels' => 'peoples',
+        'model_kebab' => 'people',
+        'model_kebabs' => 'peoples',
+        'model_lower' => 'people',
+        'model_lowers' => 'people',
         'model_label' => 'People',
+        'model_labels' => 'People',
         'model_label_plural' => 'People',
         'model_route' => 'playground.crm.api.peoples',
         'model_slug' => 'people',
+        'model_slugs' => 'peoples',
         'model_slug_plural' => 'peoples',
+        'model_snake' => 'people',
+        'model_snakes' => 'peoples',
+        'model_studly' => 'People',
+        'model_studlies' => 'Peoples',
         'model_variable' => 'people',
+        'model_variables' => 'peoples',
         'model_variable_plural' => 'peoples',
         'module_label' => 'CRM',
+        'module_labels' => 'CRMs',
         'module_label_plural' => 'CRMs',
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
+        'module_slugs' => 'crms',
         'privilege' => 'playground-crm-api:people',
         'table' => 'crm_peoples',
     ];
@@ -133,7 +148,7 @@ class PeopleController extends Controller
     /**
      * Display a listing of People resources.
      *
-     * @route GET /api/crm/people playground.crm.api.peoples
+     * @route GET /api/crm/peoples playground.crm.api.peoples
      */
     public function index(
         Requests\People\IndexRequest $request
@@ -232,7 +247,7 @@ class PeopleController extends Controller
     /**
      * Store a newly created API People resource in storage.
      *
-     * @route POST /api/crm/people playground.crm.api.peoples.post
+     * @route POST /api/crm/peoples playground.crm.api.peoples.post
      */
     public function store(
         Requests\People\StoreRequest $request
