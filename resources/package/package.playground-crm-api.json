@@ -71,25 +71,16 @@
         "laravel/sanctum": "^4.0"
     },
     "package_suggest": [],
-    "controllers": [
-        "resources/package/controller.base.json",
-        "resources/package/client/controller.json",
-        "resources/package/contact/controller.json",
-        "resources/package/location/controller.json",
-        "resources/package/organization/controller.json",
-        "resources/package/people/controller.json"
-    ],
+    "controllers": [],
     "models": [],
     "policies": [],
-    "requests": [
-        "resources/package/form.request.json"
-    ],
+    "requests": [],
     "routes": {
-        "clients": "resources/package/client/route.json",
-        "contacts": "resources/package/contact/route.json",
-        "locations": "resources/package/location/route.json",
-        "organizations": "resources/package/organization/route.json",
-        "peoples": "resources/package/people/route.json"
+        "clients": "",
+        "contacts": "",
+        "locations": "",
+        "organizations": "",
+        "peoples": ""
     },
     "seeders": [],
     "transformers": [],
