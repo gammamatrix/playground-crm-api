@@ -26,7 +26,7 @@ This application provides OpenAPI documentation: [openapi.yaml](openapi.yaml).
 - Index endpoints support advanced query filtering.
 
 OpenAPI API Documentation is built with npm using Redocly.
-- npm is only needed to generate documentation and is not needed to operate the Playground: CRM API API.
+- npm is only needed to generate documentation and is not needed to operate the Playground: CRM API.
 
 See [package.json](package.json) requirements.
 
@@ -96,22 +96,22 @@ composer cloc
 
 ```terminaloutput
 ➜  playground-crm-api git:(develop) ✗ composer cloc
-      0 text files.
-      0 unique files.
-      0 files ignored.
+     396 text files.
+     384 unique files.                                          
+     346 files ignored.
 
-github.com/AlDanial/cloc v 1.98  T=0.0 s (0.0 files/s, 0.0 lines/s)
+github.com/AlDanial/cloc v 2.08  T=0.18 s (2087.5 files/s, 155119.9 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-JSON                             0              0              0              0
-PHP                              0              0              0              0
-YAML                             0              0              0              0
-XML                              0              0              0              0
-Markdown                         0              0              0              0
-INI                              0              0              0              0
+YAML                            54              4              0          11433
+PHP                            154           1464           1989           6700
+JSON                           162              0              0           5765
+XML                             10              0              7            992
+Markdown                         3             54              1            110
+INI                              1              3              0             12
 -------------------------------------------------------------------------------
-SUM:                             0              0              0              0
+SUM:                           384           1525           1997          25012
 -------------------------------------------------------------------------------
 ```
 
