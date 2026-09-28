@@ -73,6 +73,7 @@ class OrganizationTestCase extends PlaygroundCase
         'module_labels' => 'CRMs',
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
+        'module_slugs' => 'crms',
         'privilege' => 'playground-crm-api:organization',
         'table' => 'crm_organizations',
     ];

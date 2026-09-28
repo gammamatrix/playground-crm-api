@@ -73,6 +73,7 @@ class ClientTestCase extends PlaygroundCase
         'module_labels' => 'CRMs',
         'module_route' => 'playground.crm.api',
         'module_slug' => 'crm',
+        'module_slugs' => 'crms',
         'privilege' => 'playground-crm-api:client',
         'table' => 'crm_clients',
     ];

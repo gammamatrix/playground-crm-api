@@ -8,7 +8,7 @@
     "module_labels": "CRMs",
     "module_slug": "crm",
     "module_slugs": "crms",
-    "name": "CRM",
+    "name": "CRM API",
     "namespace": "Playground/Crm/Api",
     "organization": "Playground",
     "organization_email": "jeremy.postlethwaite@gmail.com",
