@@ -19,6 +19,7 @@
     "model_column": "people",
     "model_fqdn": "Playground/Crm/Models/People",
     "model_route": "",
+    "model_route_param": "people",
     "module_route": "",
     "model_slug_plural": "",
     "model_camel": "people",

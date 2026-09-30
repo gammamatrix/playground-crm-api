@@ -19,6 +19,7 @@
     "model_column": "contact",
     "model_fqdn": "Playground/Crm/Models/Contact",
     "model_route": "",
+    "model_route_param": "contact",
     "module_route": "",
     "model_slug_plural": "",
     "model_camel": "contact",

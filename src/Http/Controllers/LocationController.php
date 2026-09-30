@@ -34,6 +34,7 @@ class LocationController extends Controller
         'model_labels' => 'Locations',
         'model_label_plural' => 'Locations',
         'model_route' => 'playground.crm.api.locations',
+        'model_route_param' => 'location',
         'model_slug' => 'location',
         'model_slugs' => 'locations',
         'model_slug_plural' => 'locations',

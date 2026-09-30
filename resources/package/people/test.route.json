@@ -11,6 +11,7 @@
     "model_kebabs": "peoples",
     "model_label": "People",
     "model_labels": "People",
+    "model_route_param": "people",
     "model_lower": "people",
     "model_lowers": "people",
     "model_slug": "people",

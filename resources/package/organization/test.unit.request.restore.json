@@ -11,6 +11,7 @@
     "model_kebabs": "organizations",
     "model_label": "Organization",
     "model_labels": "Organizations",
+    "model_route_param": "organization",
     "model_lower": "organization",
     "model_lowers": "organizations",
     "model_slug": "organization",

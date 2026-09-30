@@ -58,6 +58,7 @@ class OrganizationTestCase extends PlaygroundCase
         'model_label_plural' => 'Organizations',
         'model_labels' => 'Organizations',
         'model_route' => 'playground.crm.api.organizations',
+        'model_route_param' => 'organization',
         'model_slug' => 'organization',
         'model_slugs' => 'organizations',
         'model_slug_plural' => 'organizations',

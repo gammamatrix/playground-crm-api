@@ -11,6 +11,7 @@
     "model_kebabs": "contacts",
     "model_label": "Contact",
     "model_labels": "Contacts",
+    "model_route_param": "contact",
     "model_lower": "contact",
     "model_lowers": "contacts",
     "model_slug": "contact",

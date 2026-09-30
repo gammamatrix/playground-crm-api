@@ -34,6 +34,7 @@ class OrganizationController extends Controller
         'model_labels' => 'Organizations',
         'model_label_plural' => 'Organizations',
         'model_route' => 'playground.crm.api.organizations',
+        'model_route_param' => 'organization',
         'model_slug' => 'organization',
         'model_slugs' => 'organizations',
         'model_slug_plural' => 'organizations',

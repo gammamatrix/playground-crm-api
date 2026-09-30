@@ -58,6 +58,7 @@ class PeopleTestCase extends PlaygroundCase
         'model_label_plural' => 'People',
         'model_labels' => 'People',
         'model_route' => 'playground.crm.api.peoples',
+        'model_route_param' => 'people',
         'model_slug' => 'people',
         'model_slugs' => 'peoples',
         'model_slug_plural' => 'peoples',

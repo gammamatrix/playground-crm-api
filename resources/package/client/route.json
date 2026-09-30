@@ -19,6 +19,7 @@
     "model_column": "client",
     "model_fqdn": "Playground/Crm/Models/Client",
     "model_route": "",
+    "model_route_param": "client",
     "module_route": "",
     "model_slug_plural": "",
     "model_camel": "client",

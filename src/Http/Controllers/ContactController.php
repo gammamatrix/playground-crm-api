@@ -34,6 +34,7 @@ class ContactController extends Controller
         'model_labels' => 'Contacts',
         'model_label_plural' => 'Contacts',
         'model_route' => 'playground.crm.api.contacts',
+        'model_route_param' => 'contact',
         'model_slug' => 'contact',
         'model_slugs' => 'contacts',
         'model_slug_plural' => 'contacts',

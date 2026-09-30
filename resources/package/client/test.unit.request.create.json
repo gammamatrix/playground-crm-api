@@ -11,6 +11,7 @@
     "model_kebabs": "clients",
     "model_label": "Client",
     "model_labels": "Clients",
+    "model_route_param": "client",
     "model_lower": "client",
     "model_lowers": "clients",
     "model_slug": "client",

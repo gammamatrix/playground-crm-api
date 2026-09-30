@@ -58,6 +58,7 @@ class ClientTestCase extends PlaygroundCase
         'model_label_plural' => 'Clients',
         'model_labels' => 'Clients',
         'model_route' => 'playground.crm.api.clients',
+        'model_route_param' => 'client',
         'model_slug' => 'client',
         'model_slugs' => 'clients',
         'model_slug_plural' => 'clients',

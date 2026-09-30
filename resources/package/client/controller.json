@@ -34,6 +34,7 @@
     "slug": "client",
     "slug_plural": "clients",
     "model_route": "playground.crm.api.clients",
+    "model_route_param": "client",
     "module_route": "playground.crm.api",
     "model_camel": "client",
     "model_camels": "clients",

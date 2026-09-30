@@ -11,6 +11,7 @@
     "model_kebabs": "locations",
     "model_label": "Location",
     "model_labels": "Locations",
+    "model_route_param": "location",
     "model_lower": "location",
     "model_lowers": "locations",
     "model_slug": "location",
