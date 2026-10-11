@@ -13,6 +13,7 @@
     "organization": "Playground",
     "organization_email": "jeremy.postlethwaite@gmail.com",
     "package": "playground-crm-api",
+    "recipe": "crm",
     "withBlades": false,
     "withControllers": true,
     "withFactories": false,
