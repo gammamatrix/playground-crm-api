@@ -13,12 +13,10 @@ use Playground\Crm\Api\Policies\ClientPolicy;
 use Playground\Crm\Api\Policies\ContactPolicy;
 use Playground\Crm\Api\Policies\LocationPolicy;
 use Playground\Crm\Api\Policies\OrganizationPolicy;
-use Playground\Crm\Api\Policies\PeoplePolicy;
 use Playground\Crm\Models\Client;
 use Playground\Crm\Models\Contact;
 use Playground\Crm\Models\Location;
 use Playground\Crm\Models\Organization;
-use Playground\Crm\Models\People;
 
 /**
  * Playground: CRM API Configuration and Environment Variables
@@ -47,7 +45,6 @@ use Playground\Crm\Models\People;
  *           contacts: bool,
  *           locations: bool,
  *           organizations: bool,
- *           peoples: bool,
  *       },
  *       abilities: array<string, string[]>,
  *       sitemap: array{
@@ -141,7 +138,6 @@ return [
         Contact::class => ContactPolicy::class,
         Location::class => LocationPolicy::class,
         Organization::class => OrganizationPolicy::class,
-        People::class => PeoplePolicy::class,
     ],
 
     /*
@@ -157,7 +153,6 @@ return [
         'contacts' => (bool) env('PLAYGROUND_CRM_API_ROUTES_CONTACTS', true),
         'locations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_LOCATIONS', true),
         'organizations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_ORGANIZATIONS', true),
-        'peoples' => (bool) env('PLAYGROUND_CRM_API_ROUTES_PEOPLES', true),
     ],
 
     /*
@@ -177,7 +172,6 @@ return [
             'playground-crm-api:contact:*',
             'playground-crm-api:location:*',
             'playground-crm-api:organization:*',
-            'playground-crm-api:people:*',
         ],
         'user' => [
             'playground-crm-api:client:view',
@@ -188,8 +182,6 @@ return [
             'playground-crm-api:location:viewAny',
             'playground-crm-api:organization:view',
             'playground-crm-api:organization:viewAny',
-            'playground-crm-api:people:view',
-            'playground-crm-api:people:viewAny',
         ],
     ],
 ];
