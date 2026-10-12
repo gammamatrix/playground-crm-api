@@ -87,9 +87,6 @@ Create Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\CreateReque
 Create Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\CreateRequest)
  [x] Request instance
 
-Create Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\CreateRequest)
- [x] Request instance
-
 Destroy Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\DestroyRequest)
  [x] Request instance
 
@@ -100,9 +97,6 @@ Destroy Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\DestroyReq
  [x] Request instance
 
 Destroy Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\DestroyRequest)
- [x] Request instance
-
-Destroy Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\DestroyRequest)
  [x] Request instance
 
 Edit Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\EditRequest)
@@ -117,9 +111,6 @@ Edit Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\EditRequest)
 Edit Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\EditRequest)
  [x] Request instance
 
-Edit Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\EditRequest)
- [x] Request instance
-
 Index Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\IndexRequest)
  [x] Request instance
 
@@ -130,9 +121,6 @@ Index Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\IndexRequest
  [x] Request instance
 
 Index Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\IndexRequest)
- [x] Request instance
-
-Index Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\IndexRequest)
  [x] Request instance
 
 Instance (Tests\Feature\Playground\Crm\Api\Http\Requests\FormRequest\Instance)
@@ -200,47 +188,7 @@ Lock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\LockRequest)
 Lock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\LockRequest)
  [x] Request instance
 
-Lock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\LockRequest)
- [x] Request instance
-
 Organization Route (Tests\Feature\Playground\Crm\Api\Http\Controllers\Playground\OrganizationRoute)
- [x] Json guest cannot see info
- [x] Json guest cannot destroy
- [x] Json guest cannot restore
- [x] Json guest cannot get index
- [x] Json guest cannot lock
- [x] Json guest cannot unlock
- [x] Json guest cannot get create info
- [x] Json guest cannot get edit info
- [x] Json guest cannot store
- [x] Json guest cannot update
- [x] Json admin can get index
- [x] Json show info for admin
- [x] Json admin can get create info
- [x] Json admin can get edit info
- [x] Json destroy as admin and succeed
- [x] Json restore as admin and succeed
- [x] Json update as admin without payload and passes validation
- [x] Json lock as admin and succeed
- [x] Json store as admin without payload and fail validation
- [x] Json unlock as admin and succeed
- [x] Json get create info as admin with invalid parameter and fail validation
- [x] Json admin can get index with filters
- [x] Json edit as admin and fail validation with invalid parameter
- [x] Json store as admin and succeed
- [x] Json lock as admin and succeed with no redirect
- [x] Json destroy as admin and succeed with force delete
- [x] Json restore as admin and succeed with no redirect
- [x] Json unlock as admin and succeed with no redirect
- [x] Json admin can update
- [x] Json destroy as admin and succeed with no content
- [x] Json lock as user and get denied
- [x] Json restore as user and get denied
- [x] Json unlock as user and get denied
- [x] Json destroy as admin and succeed and ignore redirect
- [x] Json destroy as user and get denied and no force delete allowed
-
-People Route (Tests\Feature\Playground\Crm\Api\Http\Controllers\Playground\PeopleRoute)
  [x] Json guest cannot see info
  [x] Json guest cannot destroy
  [x] Json guest cannot restore
@@ -289,9 +237,6 @@ Policy (Tests\Unit\Playground\Crm\Api\Policies\LocationPolicy\Policy)
 Policy (Tests\Unit\Playground\Crm\Api\Policies\OrganizationPolicy\Policy)
  [x] Policy instance
 
-Policy (Tests\Unit\Playground\Crm\Api\Policies\PeoplePolicy\Policy)
- [x] Policy instance
-
 Restore Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\RestoreRequest)
  [x] Request instance
 
@@ -302,9 +247,6 @@ Restore Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\RestoreReq
  [x] Request instance
 
 Restore Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\RestoreRequest)
- [x] Request instance
-
-Restore Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\RestoreRequest)
  [x] Request instance
 
 Show Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\ShowRequest)
@@ -319,9 +261,6 @@ Show Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\ShowRequest)
 Show Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\ShowRequest)
  [x] Request instance
 
-Show Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\ShowRequest)
- [x] Request instance
-
 Store Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\StoreRequest)
  [x] Request instance
 
@@ -332,9 +271,6 @@ Store Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\StoreRequest
  [x] Request instance
 
 Store Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\StoreRequest)
- [x] Request instance
-
-Store Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\StoreRequest)
  [x] Request instance
 
 Unlock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\UnlockRequest)
@@ -349,9 +285,6 @@ Unlock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\UnlockReque
 Unlock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\UnlockRequest)
  [x] Request instance
 
-Unlock Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\UnlockRequest)
- [x] Request instance
-
 Update Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Client\UpdateRequest)
  [x] Request instance
 
@@ -362,8 +295,5 @@ Update Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Location\UpdateReque
  [x] Request instance
 
 Update Request (Tests\Unit\Playground\Crm\Api\Http\Requests\Organization\UpdateRequest)
- [x] Request instance
-
-Update Request (Tests\Unit\Playground\Crm\Api\Http\Requests\People\UpdateRequest)
  [x] Request instance
 
