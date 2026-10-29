@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-10-12 18:10:44</timestamp>
+  <timestamp>2026-10-29 23:29:26</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>69</methodCount>
+    <methodCount>89</methodCount>
     <crapMethodCount>0</crapMethodCount>
     <crapLoad>0</crapLoad>
-    <totalCrap>154</totalCrap>
+    <totalCrap>196</totalCrap>
     <crapMethodPercent>0</crapMethodPercent>
   </stats>
   <methods>
@@ -463,6 +463,138 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>create</methodName>
+      <methodSignature>create(Requests\Tag\CreateRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>create(Requests\Tag\CreateRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>edit</methodName>
+      <methodSignature>edit(Tag $tag, Requests\Tag\EditRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>edit(Tag $tag, Requests\Tag\EditRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>destroy</methodName>
+      <methodSignature>destroy(Tag $tag, Requests\Tag\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Tag $tag, Requests\Tag\DestroyRequest $request): Response</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>lock</methodName>
+      <methodSignature>lock(Tag $tag, Requests\Tag\LockRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>lock(Tag $tag, Requests\Tag\LockRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>index</methodName>
+      <methodSignature>index(Requests\Tag\IndexRequest $request): JsonResponse|Resources\TagCollection</methodSignature>
+      <fullMethod>index(Requests\Tag\IndexRequest $request): JsonResponse|Resources\TagCollection</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>restore</methodName>
+      <methodSignature>restore(Tag $tag, Requests\Tag\RestoreRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>restore(Tag $tag, Requests\Tag\RestoreRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>show</methodName>
+      <methodSignature>show(Tag $tag, Requests\Tag\ShowRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>show(Tag $tag, Requests\Tag\ShowRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(Requests\Tag\StoreRequest $request): Response|JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>store(Requests\Tag\StoreRequest $request): Response|JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>unlock</methodName>
+      <methodSignature>unlock(Tag $tag, Requests\Tag\UnlockRequest $request): JsonResponse|Resources\Tag</methodSignature>
+      <fullMethod>unlock(Tag $tag, Requests\Tag\UnlockRequest $request): JsonResponse|Resources\Tag</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TagController</className>
+      <methodName>update</methodName>
+      <methodSignature>update(Tag $tag, Requests\Tag\UpdateRequest $request): JsonResponse</methodSignature>
+      <fullMethod>update(Tag $tag, Requests\Tag\UpdateRequest $request): JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TaggedController</className>
+      <methodName>destroy</methodName>
+      <methodSignature>destroy(Tagged $tagged, Requests\Tagged\DestroyRequest $request): Response</methodSignature>
+      <fullMethod>destroy(Tagged $tagged, Requests\Tagged\DestroyRequest $request): Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Controllers</package>
+      <className>Playground\Crm\Api\Http\Controllers\TaggedController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(Requests\Tagged\StoreRequest $request): Response|JsonResponse|Resources\Tagged</methodSignature>
+      <fullMethod>store(Requests\Tagged\StoreRequest $request): Response|JsonResponse|Resources\Tagged</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
       <package>Playground\Crm\Api\Http\Requests\Client</package>
       <className>Playground\Crm\Api\Http\Requests\Client\DestroyRequest</className>
       <methodName>rules</methodName>
@@ -628,6 +760,61 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
+      <package>Playground\Crm\Api\Http\Requests\Tag</package>
+      <className>Playground\Crm\Api\Http\Requests\Tag\DestroyRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Requests\Tag</package>
+      <className>Playground\Crm\Api\Http\Requests\Tag\StoreRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation()</methodSignature>
+      <fullMethod>prepareForValidation()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Requests\Tag</package>
+      <className>Playground\Crm\Api\Http\Requests\Tag\UpdateRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation()</methodSignature>
+      <fullMethod>prepareForValidation()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Requests\Tagged</package>
+      <className>Playground\Crm\Api\Http\Requests\Tagged\DestroyRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Requests\Tagged</package>
+      <className>Playground\Crm\Api\Http\Requests\Tagged\StoreRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation()</methodSignature>
+      <fullMethod>prepareForValidation()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
       <package>Playground\Crm\Api\Http\Resources</package>
       <className>Playground\Crm\Api\Http\Resources\Client</className>
       <methodName>with</methodName>
@@ -716,6 +903,39 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
+      <package>Playground\Crm\Api\Http\Resources</package>
+      <className>Playground\Crm\Api\Http\Resources\Tag</className>
+      <methodName>with</methodName>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Resources</package>
+      <className>Playground\Crm\Api\Http\Resources\TagCollection</className>
+      <methodName>with</methodName>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Crm\Api\Http\Resources</package>
+      <className>Playground\Crm\Api\Http\Resources\Tagged</className>
+      <methodName>with</methodName>
+      <methodSignature>with(Request $request): array</methodSignature>
+      <fullMethod>with(Request $request): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
       <package>Playground\Crm\Api</package>
       <className>Playground\Crm\Api\ServiceProvider</className>
       <methodName>boot</methodName>
@@ -754,8 +974,8 @@
       <methodName>routes</methodName>
       <methodSignature>routes(array $config): void</methodSignature>
       <fullMethod>routes(array $config): void</fullMethod>
-      <crap>5</crap>
-      <complexity>5</complexity>
+      <crap>7</crap>
+      <complexity>7</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -765,8 +985,8 @@
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>20</crap>
-      <complexity>20</complexity>
+      <crap>22</crap>
+      <complexity>22</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
