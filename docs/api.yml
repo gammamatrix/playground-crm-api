@@ -32,6 +32,9 @@ tags:
   -
     name: Organization
     description: 'Manage organizations in storage.'
+  -
+    name: Tag
+    description: 'Manage tags in storage.'
 paths:
   '/api/crm/clients/{id}':
     $ref: paths/clients/id.yml
@@ -89,6 +92,20 @@ paths:
     $ref: paths/organizations/create.yml
   '/api/crm/organizations/edit/{id}':
     $ref: paths/organizations/edit.yml
+  '/api/crm/tags/{id}':
+    $ref: paths/tags/id.yml
+  /api/crm/tags:
+    $ref: paths/tags/index.yml
+  /api/crm/tags/index:
+    $ref: paths/tags/index-form.yml
+  '/api/crm/tags/lock/{id}':
+    $ref: paths/tags/lock.yml
+  '/api/crm/tags/restore/{id}':
+    $ref: paths/tags/restore.yml
+  /api/crm/tags/create:
+    $ref: paths/tags/create.yml
+  '/api/crm/tags/edit/{id}':
+    $ref: paths/tags/edit.yml
 components:
   schemas:
     Client:
@@ -99,3 +116,5 @@ components:
       $ref: models/location.yml
     Organization:
       $ref: models/organization.yml
+    Tag:
+      $ref: models/tag.yml

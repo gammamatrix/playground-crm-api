@@ -13,10 +13,14 @@ use Playground\Crm\Api\Policies\ClientPolicy;
 use Playground\Crm\Api\Policies\ContactPolicy;
 use Playground\Crm\Api\Policies\LocationPolicy;
 use Playground\Crm\Api\Policies\OrganizationPolicy;
+use Playground\Crm\Api\Policies\TaggedPolicy;
+use Playground\Crm\Api\Policies\TagPolicy;
 use Playground\Crm\Models\Client;
 use Playground\Crm\Models\Contact;
 use Playground\Crm\Models\Location;
 use Playground\Crm\Models\Organization;
+use Playground\Crm\Models\Tag;
+use Playground\Crm\Models\Tagged;
 
 /**
  * Playground: CRM API Configuration and Environment Variables
@@ -45,6 +49,8 @@ use Playground\Crm\Models\Organization;
  *           contacts: bool,
  *           locations: bool,
  *           organizations: bool,
+ *           tags: bool,
+ *           tagged: bool,
  *       },
  *       abilities: array<string, string[]>,
  *       sitemap: array{
@@ -138,6 +144,8 @@ return [
         Contact::class => ContactPolicy::class,
         Location::class => LocationPolicy::class,
         Organization::class => OrganizationPolicy::class,
+        Tag::class => TagPolicy::class,
+        Tagged::class => TaggedPolicy::class,
     ],
 
     /*
@@ -153,6 +161,8 @@ return [
         'contacts' => (bool) env('PLAYGROUND_CRM_API_ROUTES_CONTACTS', true),
         'locations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_LOCATIONS', true),
         'organizations' => (bool) env('PLAYGROUND_CRM_API_ROUTES_ORGANIZATIONS', true),
+        'tags' => (bool) env('PLAYGROUND_CRM_API_ROUTES_TAGS', true),
+        'tagged' => (bool) env('PLAYGROUND_CRM_API_ROUTES_TAGGED', true),
     ],
 
     /*
@@ -172,6 +182,8 @@ return [
             'playground-crm-api:contact:*',
             'playground-crm-api:location:*',
             'playground-crm-api:organization:*',
+            'playground-crm-api:tag:*',
+            'playground-crm-api:tagged:*',
         ],
         'user' => [
             'playground-crm-api:client:view',
@@ -182,6 +194,10 @@ return [
             'playground-crm-api:location:viewAny',
             'playground-crm-api:organization:view',
             'playground-crm-api:organization:viewAny',
+            'playground-crm-api:tag:view',
+            'playground-crm-api:tag:viewAny',
+            'playground-crm-api:tagged:view',
+            'playground-crm-api:tagged:viewAny',
         ],
     ],
 ];
