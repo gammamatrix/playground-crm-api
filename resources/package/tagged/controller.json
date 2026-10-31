@@ -55,6 +55,7 @@
     "privilege": "playground-crm-api",
     "route": "playground.crm.api",
     "view": "playground-crm-api",
+    "actions": [],
     "implements": [],
     "uses": [],
     "packageInfo": {
